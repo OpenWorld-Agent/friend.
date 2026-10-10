@@ -1,8 +1,8 @@
 # friend.
 
-****friend. is your personal data wallet for AI.** Store and organize your personal information—from conversations and meeting notes to records of your everyday life—and choose what to share with the agents you use. Through MCP, friend. connects your data to your agents, giving them the context to understand you and provide more personalized help, without making you explain everything from scratch.
+**friend. is your personal data wallet for AI.** Store and organize your personal information—from conversations and meeting notes to records of your everyday life—and choose what to share with the agents you use. Through MCP, friend. connects your data to your agents, giving them the context to understand you and provide more personalized help, without making you explain everything from scratch.
 
-**Open your world to your agent.**.
+**Open your world to your agent.**
 
 This is the **public distribution repository** for friend. Memory (the `openworld-memory` application). It contains this English README, a [Chinese README](README-zh.md), and compiled [Releases](https://github.com/OpenWorld-Agent/friend./releases). The complete application source code is not published here. No model weights, personal data, or credentials are included in the releases.
 

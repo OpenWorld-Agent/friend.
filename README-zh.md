@@ -1,6 +1,8 @@
 # friend.
 
-**供 Codex 和 Claude 使用的个人记忆数据库。**在本机 WebUI 上传文件，将材料处理为有来源和证据的记忆，人工核查后通过 MCP 查询同一份数据库。
+**你的个人数据钱包，让你的 Agent 更了解你。**集中存储和整理你的个人信息——从聊天内容、会议记录，到日常生活中的各类记录。你决定分享什么，并通过 MCP 将相关上下文提供给 Codex、Claude Code、Claude Desktop 等 Agent，让它们更了解你的背景，无需每次都从头解释。
+
+**Open your world to your agent.**
 
 这是 friend. Memory（可执行程序名为 `openworld-memory`）的**公开分发仓库**。仓库只包含本中文版、[英文 README](README.md) 和编译后的 [Releases](https://github.com/OpenWorld-Agent/friend./releases)，不公开完整应用源码。发布包不含模型权重、个人数据或凭据。
 
