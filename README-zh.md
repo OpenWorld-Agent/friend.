@@ -18,7 +18,7 @@
 python3 install.py --version v0.1.3 --clients codex,claude --start --autostart
 ```
 
-本版安装器的 SHA-256 为 `39b6050963908d3026f0847119e1ced3309d025eb999686e1e99b57e7f245d5d`。macOS 可用 `shasum -a 256 install.py`，Linux 可用 `sha256sum install.py`；安装器还会单独校验下载的可执行包。
+本版安装器的 SHA-256 为 `15cbe631d9d37d69ce5bf2f8db02682a49d581dee88c98376c1db3422d239b8a`。macOS 可用 `shasum -a 256 install.py`，Linux 可用 `sha256sum install.py`；安装器还会单独校验下载的可执行包。
 
 | 独立包 | 系统要求 |
 | --- | --- |

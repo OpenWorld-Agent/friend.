@@ -18,7 +18,7 @@ For a manual installation, download `install.py` and `SHA256SUMS` from the [v0.1
 python3 install.py --version v0.1.3 --clients codex,claude --start --autostart
 ```
 
-The release's installer SHA-256 is `39b6050963908d3026f0847119e1ced3309d025eb999686e1e99b57e7f245d5d`. On macOS, `shasum -a 256 install.py` prints the digest; on Linux, use `sha256sum install.py`. The installer verifies the downloaded executable archive separately.
+The release's installer SHA-256 is `15cbe631d9d37d69ce5bf2f8db02682a49d581dee88c98376c1db3422d239b8a`. On macOS, `shasum -a 256 install.py` prints the digest; on Linux, use `sha256sum install.py`. The installer verifies the downloaded executable archive separately.
 
 | Native package | Requirements |
 | --- | --- |
