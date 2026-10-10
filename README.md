@@ -8,22 +8,22 @@ This is the **public distribution repository** for friend. Memory (the `openworl
 
 Copy this prompt into Codex on the computer where you want the memory database:
 
-> Install friend. Memory v0.1.2 from the public release at https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.2. Download the `install.py` and `SHA256SUMS` release assets, verify the installer's SHA-256, then run `python3 install.py --version v0.1.2 --clients codex,claude --start --autostart`. If an older WebUI is running, stop it before replacing the executable; preserve my existing memory data and Codex/Claude MCP configurations. Verify that the MCP server starts and open the local WebUI. Let me enter any model endpoints or API keys in the WebUI. Do not request access to the private source repository.
+> Install friend. Memory v0.1.3 from the public release at https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.3. Download the `install.py` and `SHA256SUMS` release assets, verify the installer's SHA-256, then run `python3 install.py --version v0.1.3 --clients codex,claude --start --autostart`. If an older WebUI is running, stop it before replacing the executable; preserve my existing memory data and Codex/Claude MCP configurations. Verify that the MCP server starts and open the local WebUI. Let me enter any model endpoints or API keys in the WebUI. Do not request access to the private source repository.
 
 The public installer selects the correct native archive, checks it against `SHA256SUMS`, installs `openworld-memory` under `~/.local/bin`, backs up and merges supported client settings, and starts the local WebUI. Python 3.9+ is needed to run the installer; the native executable includes its own runtime.
 
-For a manual installation, download `install.py` and `SHA256SUMS` from the [v0.1.2 release](https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.2), verify `install.py` against its line in `SHA256SUMS`, then run:
+For a manual installation, download `install.py` and `SHA256SUMS` from the [v0.1.3 release](https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.3), verify `install.py` against its line in `SHA256SUMS`, then run:
 
 ```bash
-python3 install.py --version v0.1.2 --clients codex,claude --start --autostart
+python3 install.py --version v0.1.3 --clients codex,claude --start --autostart
 ```
 
-The release's installer SHA-256 is `960fc5d4afe7ad0aec421a73188aee4231b55d528f51d2cabde4fb6a3fce3146`. On macOS, `shasum -a 256 install.py` prints the digest; on Linux, use `sha256sum install.py`. The installer verifies the downloaded executable archive separately.
+The release's installer SHA-256 is `39b6050963908d3026f0847119e1ced3309d025eb999686e1e99b57e7f245d5d`. On macOS, `shasum -a 256 install.py` prints the digest; on Linux, use `sha256sum install.py`. The installer verifies the downloaded executable archive separately.
 
 | Native package | Requirements |
 | --- | --- |
-| `openworld-memory-v0.1.2-macos-arm64.tar.gz` | macOS 14 or later on Apple Silicon |
-| `openworld-memory-v0.1.2-linux-x86_64.tar.gz` | Linux x86_64 with glibc 2.35 or later (for example, Ubuntu 22.04+) |
+| `openworld-memory-v0.1.3-macos-arm64.tar.gz` | macOS 14 or later on Apple Silicon |
+| `openworld-memory-v0.1.3-linux-x86_64.tar.gz` | Linux x86_64 with glibc 2.35 or later (for example, Ubuntu 22.04+) |
 
 There is no native Windows or Intel Mac package in this release. Extracting a native archive directly and running `./openworld-memory setup --clients codex,claude --start --autostart` is also supported. The optional `--autostart` setting activates at the next user login; `--start` starts the WebUI now.
 
@@ -35,6 +35,8 @@ There is no native Windows or Intel Mac package in this release. Extracting a na
 - Lets you configure compatible text, vision, speech, and embedding model endpoints in the WebUI. Those services are optional and are not bundled.
 
 The WebUI listens on `http://127.0.0.1:8765/` by default. Setup prints a private local login link; do not share it. Restart Codex and Claude after installation so they load the new MCP configuration. Audio and video processing requires system FFmpeg/ffprobe. Content sent to a model provider follows the endpoint you configure; review that provider's privacy policy before enabling it.
+
+After installation, the **Chat** tab at [friend.open-world.cn/app/](https://friend.open-world.cn/app/) checks for the local app and opens its WebUI on your computer. If it is unavailable, Chat shows the installation prompt and a manual Open local WebUI button. The website does not read your memory or local access token. On first login, the local WebUI presents a four-step guide for MCP, optional model endpoints, and the first upload; you can skip it and reopen it later in settings.
 
 ## Distribution and licenses
 
