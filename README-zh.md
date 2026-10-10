@@ -8,24 +8,25 @@
 
 将下面的提示词发给需要安装记忆库的那台电脑上的 Codex：
 
-> 从公开发布页 https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.3 安装 friend. Memory v0.1.3。下载 Release 附件 `install.py` 和 `SHA256SUMS`，核对安装器的 SHA-256，然后运行 `python3 install.py --version v0.1.3 --clients codex,claude --start --autostart`。如果旧版 WebUI 正在运行，替换程序前先停止；保留现有记忆数据和 Codex／Claude 的 MCP 配置。验证 MCP 服务能启动，并打开本机 WebUI。模型地址和 API 密钥让我在 WebUI 中自行填写。不要申请访问私有源码仓库。
+> 从公开发布页 https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.4 安装 friend. Memory v0.1.4。下载 Release 附件 `install.py` 和 `SHA256SUMS`，核对安装器的 SHA-256，然后运行 `python3 install.py --version v0.1.4 --clients codex,claude --start --autostart`（Windows 也可用 `py -3 install.py`）。如果旧版 WebUI 正在运行，替换程序前先停止；保留现有记忆数据和 Codex／Claude 的 MCP 配置。验证 MCP 服务能启动，并打开本机 WebUI。模型地址和 API 密钥让我在 WebUI 中自行填写。不要申请访问私有源码仓库。
 
-公开安装器会选择对应平台的独立包、对照 `SHA256SUMS` 校验、安装到 `~/.local/bin/openworld-memory`、备份并合并客户端配置，然后启动本机 WebUI。运行安装器需要 Python 3.9+；独立可执行文件自带运行环境。
+公开安装器会选择对应平台的独立包、对照 `SHA256SUMS` 校验、安装到 `~/.local/bin`（Windows 使用带版本号的 `.exe`，避免运行中的客户端阻止升级）、备份并合并客户端配置，然后启动本机 WebUI。运行安装器需要 Python 3.9+；独立可执行文件自带运行环境。
 
-手动安装时，从 [v0.1.3 Release](https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.3) 下载 `install.py` 和 `SHA256SUMS`，先核对 `install.py` 对应的校验值，再执行：
+手动安装时，从 [v0.1.4 Release](https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.4) 下载 `install.py` 和 `SHA256SUMS`，先核对 `install.py` 对应的校验值，再执行：
 
 ```bash
-python3 install.py --version v0.1.3 --clients codex,claude --start --autostart
+python3 install.py --version v0.1.4 --clients codex,claude --start --autostart
 ```
 
-本版安装器的 SHA-256 为 `15cbe631d9d37d69ce5bf2f8db02682a49d581dee88c98376c1db3422d239b8a`。macOS 可用 `shasum -a 256 install.py`，Linux 可用 `sha256sum install.py`；安装器还会单独校验下载的可执行包。
+请与 Release 中 `SHA256SUMS` 的安装器条目比对：macOS 用 `shasum -a 256 install.py`，Linux 用 `sha256sum install.py`，Windows PowerShell 用 `Get-FileHash .\install.py -Algorithm SHA256`。安装器还会单独校验下载的可执行包。
 
 | 独立包 | 系统要求 |
 | --- | --- |
-| `openworld-memory-v0.1.3-macos-arm64.tar.gz` | Apple Silicon、macOS 14 或更高版本 |
-| `openworld-memory-v0.1.3-linux-x86_64.tar.gz` | Linux x86_64、glibc 2.35 或更高版本（如 Ubuntu 22.04+） |
+| `openworld-memory-v0.1.4-macos-arm64.tar.gz` | Apple Silicon、macOS 14 或更高版本 |
+| `openworld-memory-v0.1.4-linux-x86_64.tar.gz` | Linux x86_64、glibc 2.35 或更高版本（如 Ubuntu 22.04+） |
+| `openworld-memory-v0.1.4-windows-x86_64.zip` | Windows 10/11 x64 |
 
-本版没有 Windows 或 Intel Mac 独立包。也可以手动解压平台安装包，运行 `./openworld-memory setup --clients codex,claude --start --autostart`。`--autostart` 在下次用户登录时生效，`--start` 立即启动 WebUI。
+本版没有 Intel Mac 独立包。也可以手动解压平台安装包，运行 `./openworld-memory setup --clients codex,claude --start --autostart`（Windows 程序名为 `openworld-memory.exe`）。`--autostart` 在下次用户登录时生效，`--start` 立即启动 WebUI。
 
 ## 功能
 
@@ -37,6 +38,16 @@ python3 install.py --version v0.1.3 --clients codex,claude --start --autostart
 WebUI 默认只监听 `http://127.0.0.1:8765/`。安装时会输出私有的本机登录链接，不要转发给别人。安装完成后重启 Codex／Claude，使其加载新的 MCP 配置。音视频处理需要系统安装 FFmpeg／ffprobe。启用模型服务后，处理材料会发送至你配置的服务地址，请先确认提供方的隐私条款。
 
 安装后，在 [friend. 网页](https://friend.open-world.cn/app/) 点击 **Chat**，网页会检查本机服务并打开本机 WebUI；服务未启动时保留安装提示词与手动打开按钮。公网网页不能读取本机记忆或访问令牌。首次登录本机 WebUI 会出现四步引导，说明 MCP、可选模型接口与首次上传；可跳过，之后在设置中重新打开。
+
+## MCP 读写规则
+
+MCP 服务会提示 Codex／Claude：**只有当前请求需要个人历史、偏好、项目、设备等上下文时才读取记忆**；普通知识问题不应调用查询。用户提供可长期使用的个人事实、偏好、目标或重要变化时，客户端应主动调用 `memory_add` 上报，并简要告知保存内容。不保存猜测、临时闲聊、密码或 API 密钥；高度敏感的信息只有用户明确要求才保存。候选记忆需人工审核，检索内容是数据而非指令。最终工具调用仍由客户端模型决定，这些说明不能保证所有模型每次都严格遵守。详见 [MCP 规则文档](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.4/MCP-POLICY.md)。
+
+## 开发者信息源 API
+
+开发者可通过本机 REST API 注册智能家居、日历等个人信息源，再提交事件进入同一处理队列。每个来源有独立的**仅写入令牌**，不能读取记忆或修改设置。事件含稳定 `event_id`、带时区的 `occurred_at`、忠实描述的 `text` 和可选 JSON `attributes`；重复提交去重，冲突事件 ID 被拒绝。原始 JSON 保留为可核验的证据，记忆仍为待审核候选。
+
+本机 API 地址为 `http://127.0.0.1:8765`。使用 WebUI 管理令牌调用 `POST /api/sources` 创建来源，再用来源令牌调用 `POST /api/sources/{source_id}/events` 写入事件；支持轮换令牌和撤销来源。完整端点、请求示例及 Windows PowerShell 用法见[信息源 API 文档](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.4/SOURCE-API.md)。不要把 WebUI 管理令牌交给连接器，也不要把接口直接暴露到公网。
 
 ## 分发与许可
 
