@@ -45,11 +45,11 @@ After installation, the **Chat** tab at [friend.open-world.cn/app/](https://frie
 
 ## Connections and Notion
 
-The Connections page manages custom sources and platform connections, with the six quick actions retained below. Notion is the built-in account connector: choose **Notion → Connect account**, authorize your pages, select all authorized content or individual pages, and start syncing. You do not need to create a developer app or enter an OAuth secret.
+The Connections page manages custom sources and platform connections, with the six quick actions retained below. Notion is the built-in account connector: choose **Notion → Connect**, authorize your pages, select all authorized content or individual pages, and start syncing. You do not need to create a developer app or enter an OAuth secret.
 
 Automatic sync defaults to every 15 minutes while your computer and friend. service are running. The Notion panel shows progress, saved memories, errors and the next run; it also supports manual sync, pause/resume, scope changes and disconnect. Disconnect stops new reads and revokes access while preserving saved memories. Authorized-content discovery is limited by Notion's API and is not a guaranteed complete workspace backup. Attachments and media are not downloaded or transcribed; incomplete content is reported.
 
-Other platform rows, including Gmail, currently register receiving endpoints for external bridges; they do not yet authorize or synchronize those accounts. See the [connection guide](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/CONNECTORS.md).
+Only released built-in connections appear in the platform section: currently Notion. Gmail and other platforms will appear after their integrations ship in an update. Existing external bridge registrations remain under Custom devices and platforms. A fresh installation shows Connect; an authorized installation shows Manage connection using its own local state. No user's account, authorization or memories are included in an installer. See the [connection guide](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/CONNECTORS.md).
 
 Choose **Settings → Appearance → Language** for English or Simplified Chinese. Only the interface is translated: memories, page text, names, files and drafts remain in their original language.
 
@@ -80,8 +80,8 @@ The local API is at `http://127.0.0.1:8765`. Register with `POST /api/sources` u
 
 This repository intentionally contains documentation only; release assets contain compiled executables, a small installer, the friend. Android app (debug-signed demo build), checksums, and bundled license notices. The release archives do **not** contain the full source tree, development handoff documents, or example datasets. Applicable license texts are included inside each native archive. Publishing these binaries does not make every component open source.
 
-## Software updates (0.1.7 revision 2)
+## Software updates (0.1.7 revision 3)
 
-The current v0.1.7 release is **revision 2**, including Settings → Memory library → Software updates. New versions are announced in the WebUI; choosing Update and restart verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required. Existing connections and local data are retained. See [the update and recovery guide](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/UPDATES.md).
+The current v0.1.7 release is **revision 3**, including Settings → Memory library → Software updates. New versions are announced in the WebUI; choosing Update and restart verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required. Existing connections and local data are retained. See [the update and recovery guide](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/UPDATES.md).
 
-The original v0.1.7 build has no updater: install the current package once to receive it. `--build-info` reports revision 2. Standard asset names are the current packages; `r1-*` assets preserve the previous build for recovery.
+The original v0.1.7 build has no updater: install the current package once to receive it. `--build-info` reports revision 3. Standard asset names are the current packages; `r1-*` and `r2-*` assets preserve previous builds for recovery.
