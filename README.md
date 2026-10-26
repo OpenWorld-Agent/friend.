@@ -80,8 +80,8 @@ The local API is at `http://127.0.0.1:8765`. Register with `POST /api/sources` u
 
 This repository intentionally contains documentation only; release assets contain compiled executables, a small installer, the friend. Android app (debug-signed demo build), checksums, and bundled license notices. The release archives do **not** contain the full source tree, development handoff documents, or example datasets. Applicable license texts are included inside each native archive. Publishing these binaries does not make every component open source.
 
-## Software updates (0.1.7 revision 3)
+## Software updates (0.1.7 revision 4)
 
-The current v0.1.7 release is **revision 3**, including Settings → Memory library → Software updates. New versions are announced in the WebUI; choosing Update and restart verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required. Existing connections and local data are retained. See [the update and recovery guide](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/UPDATES.md).
+The current v0.1.7 release is **revision 4** (the public speech service moved to a new server; app behavior is the same as revision 3), including Settings → Memory library → Software updates. New versions are announced in the WebUI; choosing Update and restart verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required. Existing connections and local data are retained. See [the update and recovery guide](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/UPDATES.md).
 
-The original v0.1.7 build has no updater: install the current package once to receive it. `--build-info` reports revision 3. Standard asset names are the current packages; `r1-*` and `r2-*` assets preserve previous builds for recovery.
+The original v0.1.7 build has no updater: install the current package once to receive it. `--build-info` reports revision 4. Standard asset names are the current packages; `r1-*`, `r2-*` and `r3-*` assets preserve previous builds for recovery.
