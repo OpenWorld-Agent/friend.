@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1280 400" width="1280" height="400" role="img" aria-label="friend. architecture">
+<style>.s{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif}.m{font-family:ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace}</style>
+<path id="l0" d="M350,142 C420,142 410,262 480,262" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#111111" opacity="0.8"><animateMotion dur="3.2s" begin="-0.1s" repeatCount="indefinite"><mpath href="#l0"/></animateMotion></circle>
+<path id="l1" d="M350,222 C420,222 410,262 480,262" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#111111" opacity="0.8"><animateMotion dur="3.2s" begin="-0.9s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+<path id="l2" d="M350,302 C420,302 410,262 480,262" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#111111" opacity="0.8"><animateMotion dur="3.2s" begin="-1.7s" repeatCount="indefinite"><mpath href="#l2"/></animateMotion></circle>
+<path id="l3" d="M350,382 C420,382 410,262 480,262" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#111111" opacity="0.8"><animateMotion dur="3.2s" begin="-2.5s" repeatCount="indefinite"><mpath href="#l3"/></animateMotion></circle>
+<path id="r0" d="M800,262 C870,262 860,182 930,182" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#FF4B47"><animateMotion dur="2.6s" begin="-0.40s" repeatCount="indefinite"><mpath href="#r0"/></animateMotion></circle>
+<path id="r1" d="M800,262 C870,262 860,262 930,262" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#FF4B47"><animateMotion dur="2.6s" begin="-1.25s" repeatCount="indefinite"><mpath href="#r1"/></animateMotion></circle>
+<path id="r2" d="M800,262 C870,262 860,342 930,342" fill="none" stroke="#CFC9BE" stroke-width="1.5"/>
+<circle r="3.5" fill="#FF4B47"><animateMotion dur="2.6s" begin="-2.10s" repeatCount="indefinite"><mpath href="#r2"/></animateMotion></circle>
+<text class="s" x="60" y="96" font-size="17" font-weight="600" fill="#6B6862">你的数据</text>
+<text class="s" x="930" y="136" font-size="17" font-weight="600" fill="#6B6862">你的 Agent</text>
+<rect x="60" y="112.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="84" y="149" font-size="20" fill="#111111">文件与笔记</text>
+<rect x="60" y="192.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="84" y="229" font-size="20" fill="#111111">手机录音</text>
+<rect x="60" y="272.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="84" y="309" font-size="20" fill="#111111">Notion</text>
+<rect x="60" y="352.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="84" y="389" font-size="20" fill="#111111">信息源 API</text>
+<rect x="930" y="152.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="954" y="189" font-size="20" fill="#111111">Codex</text>
+<rect x="930" y="232.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="954" y="269" font-size="20" fill="#111111">Claude Code</text>
+<rect x="930" y="312.0" width="290" height="60" rx="14" fill="#FAF8F4" stroke="#E3DED4"/>
+<text class="s" x="954" y="349" font-size="20" fill="#111111">Claude Desktop</text>
+<rect x="834" y="247" width="62" height="30" rx="15" fill="#FFFFFF" stroke="#FF4B47" stroke-width="1.5"/>
+<text class="m" x="865" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#FF4B47">MCP</text>
+<rect x="480" y="130" width="320" height="264" rx="22" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+<g transform="translate(532 188) scale(0.2200)"><path fill="#FF4B47" d="M10,-99.499A100,100 0 0 1 99.499,-10L58.146,-10A59,59 0 0 0 10,-58.146Z"/><path fill="#111111" d="M99.499,10A100,100 0 0 1 10,99.499L10,58.146A59,59 0 0 0 58.146,10Z"/><path fill="#111111" d="M-10,99.499A100,100 0 0 1 -99.499,10L-58.146,10A59,59 0 0 0 -10,58.146Z"/><path fill="#111111" d="M-99.499,-10A100,100 0 0 1 -10,-99.499L-10,-58.146A59,59 0 0 0 -58.146,-10Z"/></g>
+<text class="s" x="568" y="197" font-size="25" font-weight="650" fill="#111111">friend. Memory</text>
+<line x1="510" y1="236" x2="770" y2="236" stroke="#E3DED4"/>
+<circle cx="518" cy="271" r="3" fill="#FF4B47"/>
+<text class="m" x="534" y="276" font-size="16" fill="#6B6862" xml:space="preserve">记忆与证据</text>
+<circle cx="518" cy="309" r="3" fill="#A8A39A"/>
+<text class="m" x="534" y="314" font-size="16" fill="#6B6862" xml:space="preserve">待审核候选</text>
+<circle cx="518" cy="347" r="3" fill="#A8A39A"/>
+<text class="m" x="534" y="352" font-size="16" fill="#6B6862" xml:space="preserve">WebUI  127.0.0.1:8765</text>
+<text class="s" x="640.0" y="438" text-anchor="middle" font-size="16" fill="#6B6862">保存在你自己的电脑上</text>
+</svg>
