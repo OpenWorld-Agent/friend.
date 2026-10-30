@@ -34,7 +34,7 @@
 <text class="m" x="865" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#FF4B47">MCP</text>
 <rect x="480" y="130" width="320" height="264" rx="22" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
 <g transform="translate(532 188) scale(0.2200)"><path fill="#FF4B47" d="M10,-99.499A100,100 0 0 1 99.499,-10L58.146,-10A59,59 0 0 0 10,-58.146Z"/><path fill="#111111" d="M99.499,10A100,100 0 0 1 10,99.499L10,58.146A59,59 0 0 0 58.146,10Z"/><path fill="#111111" d="M-10,99.499A100,100 0 0 1 -99.499,10L-58.146,10A59,59 0 0 0 -10,58.146Z"/><path fill="#111111" d="M-99.499,-10A100,100 0 0 1 -10,-99.499L-10,-58.146A59,59 0 0 0 -58.146,-10Z"/></g>
-<text class="s" x="568" y="197" font-size="25" font-weight="650" fill="#111111">friend. Memory</text>
+<text class="s" x="568" y="197" font-size="25" font-weight="650" fill="#111111">friend. Data</text>
 <line x1="510" y1="236" x2="770" y2="236" stroke="#E3DED4"/>
 <circle cx="518" cy="271" r="3" fill="#FF4B47"/>
 <text class="m" x="534" y="276" font-size="16" fill="#6B6862" xml:space="preserve">Memories &amp; evidence</text>

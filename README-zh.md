@@ -15,7 +15,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-zh-dark.svg">
-  <img alt="文件、手机录音、Notion 和信息源 API 汇入你电脑上的 friend. Memory，再通过 MCP 提供给 Codex、Claude Code 和 Claude Desktop。" src="assets/architecture-zh-light.svg" width="100%">
+  <img alt="文件、手机录音、Notion 和信息源 API 汇入你电脑上的 friend. Data，再通过 MCP 提供给 Codex、Claude Code 和 Claude Desktop。" src="assets/architecture-zh-light.svg" width="100%">
 </picture>
 
 </div>

@@ -15,7 +15,7 @@ Keep your conversations, meeting notes and everyday records in one place, decide
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-en-dark.svg">
-  <img alt="Files, phone recordings, Notion and the source API flow into friend. Memory on your computer, which serves Codex, Claude Code and Claude Desktop over MCP." src="assets/architecture-en-light.svg" width="100%">
+  <img alt="Files, phone recordings, Notion and the source API flow into friend. Data on your computer, which serves Codex, Claude Code and Claude Desktop over MCP." src="assets/architecture-en-light.svg" width="100%">
 </picture>
 
 </div>
