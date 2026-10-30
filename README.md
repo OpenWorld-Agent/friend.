@@ -120,7 +120,7 @@ You can also extract a native archive yourself and run `./openworld-memory setup
 </td>
 <td valign="top">
 
-**Your own models**<br>Configure compatible text, vision, speech and embedding endpoints in the WebUI. They are optional and not bundled.
+**Models, your way**<br>Sign in with a friend. account to use text, image, embedding and speech models billed to its balance, with no keys to enter. Or configure your own compatible endpoints in the WebUI.
 
 </td>
 </tr>
@@ -131,7 +131,7 @@ You can also extract a native archive yourself and run `./openworld-memory setup
 | Data | Where it goes |
 | --- | --- |
 | Memories, files and evidence | Your computer. |
-| Content for model processing | Only the endpoints you configure. It follows that provider's privacy policy, so review it before enabling. |
+| Content for model processing | Only the endpoints you configure, or, when signed in to a friend. account, the account's model service at friend.open-world.cn. Review the provider's privacy policy before enabling. |
 | Phone recordings | Encrypted with AES-256-GCM on the phone. The relay never receives the key and handles only ciphertext. |
 | The friend. website | Cannot read your memory or your local access token. |
 | Installers and releases | No model weights, personal data, credentials, account authorizations or memories. |
@@ -205,7 +205,7 @@ The **Connections** page manages custom sources and platform connections, with t
 - **Disconnect** stops new reads and revokes access. Saved memories are kept.
 - **Limits.** Authorized-content discovery is limited by Notion's API, so this is not a guaranteed complete workspace backup. Attachments and media are not downloaded or transcribed; incomplete content is reported.
 
-Only released built-in connections appear in the platform section: currently Notion. Gmail and other platforms will appear after their integrations ship in an update. Existing external bridge registrations remain under **Custom devices and platforms**. A fresh installation shows **Connect**; an authorized installation shows **Manage connection** based on its own local state. See the [connection guide][connectors].
+Notion is built in. Hosted connections for Gmail, Outlook, GitHub, Google Calendar, Linear, Google Drive and Zoom appear in the platform section once the hosted connection service enables them. Existing external bridge registrations remain under **Custom devices and platforms**. A fresh installation shows **Connect**; an authorized installation shows **Manage connection** based on its own local state. See the [connection guide][connectors].
 
 ## For developers: information-source API
 
@@ -230,12 +230,12 @@ See the [source API contract and examples][source-api], including Windows PowerS
 
 ## Updates
 
-The current v0.1.7 release is **revision 4**. The public speech service moved to a new server; app behavior is the same as revision 3.
+The current v0.1.7 release is **revision 14**. It adds friend. account sign-in (**Settings → Model endpoints → Sign in**: confirm a code in your browser; models are then provided by the account and charged to its balance, and your manual configuration returns when you sign out), embedding models through the default relay, hosted platform connections, transcription of original audio on the configured server, and memory card previews.
 
 Update from **Settings → Memory library → Software updates**. New versions are announced in the WebUI. **Update and restart** verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required, and existing connections and local data are kept. See the [update and recovery guide][updates].
 
 > [!NOTE]
-> The original v0.1.7 build has no updater. Install the current package once to get it. `--build-info` reports revision 4. Standard asset names are the current packages; `r1-*`, `r2-*` and `r3-*` assets preserve previous builds for recovery.
+> The original v0.1.7 build has no updater. Install the current package once to get it. `--build-info` reports revision 14. Standard asset names are the current packages; `r1-*` to `r4-*` assets preserve previous builds for recovery.
 
 ## About this repository
 
