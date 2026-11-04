@@ -25,10 +25,11 @@
 把下面的提示词发给**要安装记忆库的那台电脑**上的 Codex：
 
 ```text
-从公开发布页 https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.7 安装 friend. Memory v0.1.7。
+从公开发布页 https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8 安装 friend. Memory v0.1.8。
 下载 Release 附件 `install.py` 和 `SHA256SUMS`，核对安装器的 SHA-256，
-然后运行 `python3 install.py --version v0.1.7 --clients codex,claude --start --autostart`
+然后运行 `python3 install.py --version v0.1.8 --clients codex,claude --start --autostart`
 （Windows 也可用 `py -3 install.py`）。
+从 0.1.7 首次升级前，先完整备份现有数据目录。
 如果旧版 WebUI 正在运行，替换程序前先停止；保留现有记忆数据和 Codex／Claude 的 MCP 配置。
 验证 MCP 服务能启动，并打开本机 WebUI。
 模型地址和 API 密钥让我在 WebUI 中自行填写。
@@ -39,9 +40,9 @@
 
 | 平台 | 独立包 | 系统要求 |
 | --- | --- | --- |
-| macOS（Apple Silicon） | `openworld-memory-v0.1.7-macos-arm64.tar.gz` | macOS 14 或更高版本 |
-| Linux（x86_64） | `openworld-memory-v0.1.7-linux-x86_64.tar.gz` | glibc 2.35 或更高版本（如 Ubuntu 22.04+） |
-| Windows（x64） | `openworld-memory-v0.1.7-windows-x86_64.zip` | Windows 10/11 |
+| macOS（Apple Silicon） | `openworld-memory-v0.1.8-macos-arm64.tar.gz` | macOS 14 或更高版本 |
+| Linux（x86_64） | `openworld-memory-v0.1.8-linux-x86_64.tar.gz` | glibc 2.35 或更高版本（如 Ubuntu 22.04+） |
+| Windows（x64） | `openworld-memory-v0.1.8-windows-x86_64.zip` | Windows 10/11 |
 
 本版没有 Intel Mac 独立包。运行安装器需要 Python 3.9+；独立可执行文件自带运行环境。
 
@@ -50,7 +51,7 @@
 
 <br>
 
-1. 从 [v0.1.7 Release][release] 下载 `install.py` 和 `SHA256SUMS`。
+1. 从 [v0.1.8 Release][release] 下载 `install.py` 和 `SHA256SUMS`。
 2. 计算安装器的校验值，与 `SHA256SUMS` 中对应的一行比对：
 
    | 系统 | 命令 |
@@ -62,7 +63,7 @@
 3. 运行安装器：
 
    ```bash
-   python3 install.py --version v0.1.7 --clients codex,claude --start --autostart
+   python3 install.py --version v0.1.8 --clients codex,claude --start --autostart
    ```
 
 安装器接下来会：
@@ -84,7 +85,13 @@
 - 首次登录会出现四步引导，说明 MCP、可选模型接口与首次上传；可跳过，之后在设置中重新打开。
 - 在 [friend. 网页](https://friend.open-world.cn/app/) 点击 **Chat**，网页会检查本机服务并打开本机 WebUI；服务未启动时显示安装提示词和手动打开按钮。
 - 音视频处理需要系统安装 FFmpeg／ffprobe。
-- 在 **设置 → 外观 → 语言** 切换英文或简体中文。只翻译界面，记忆、页面正文、名称、文件和输入草稿保持原语言。
+- 在 **设置 → 外观 → 语言** 切换英文或简体中文。可启用内容语言包，由 Friend 生成并缓存 Records 摘要；切换语言读取已有版本。原件、名称、文件和草稿保留原语言。
+
+## 0.1.8 新内容
+
+首页与 Records 取代旧的记忆原文页面。Records 展示每次收到和提供的数据、中英文摘要，以及来源和后续使用；详情仍是悬浮卡片。设备和应用归到各自连接下面，Mac 的 Codex、Claude Code 聊天接收需在连接内明确开启。已有记忆、原件和设置保留，缺少交接凭证的旧记忆不会被编成历史交易。
+
+模型摘要需要可用的模型服务。本次验收电脑无法访问账号服务，因此没有宣称新增的真实账号模型闭环已通过；最新状态见 Release 说明。独立的 Linux Mem0 聊天实验需单独从源码安装额外依赖，标准安装包不会自动启用它。
 
 ## 功能
 
@@ -162,9 +169,9 @@ friend. Memory 会统一保留并校验不同后端的原始载荷，包括 MemO
 
 ## 手机录音
 
-friend. Memory v0.1.7 内置手机录音接收，不需要另外运行接收程序。
+friend. Memory v0.1.8 内置手机录音接收，不需要另外运行接收程序。
 
-1. **安装 App。** 安装 friend. 安卓 App（本 Release 中的 `friend-v1.0.1-debug.apk`，需 Android 10 或更高版本）。
+1. **安装 App。** 安装 friend. 安卓 App（[Android 演示安装包](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/friend-v1.0.1-debug.apk)，需 Android 10 或更高版本）。
 2. **一键配对。** 在本机 WebUI 打开 **设置 → 手机录音**，点 **一键配对**。无需任何配置：程序内置默认中转和它的证书，会自动开通通道并显示二维码。终端可运行 `openworld-memory mobile pair`。
 3. **扫码。** 在 App 中点 **扫码配对**，扫描二维码。
 4. **录音。** 之后正常用手机录音机录音即可，新录音会被转写并保存为待确认的记忆。
@@ -195,7 +202,7 @@ friend. Memory v0.1.7 内置手机录音接收，不需要另外运行接收程�
 
 ## 平台连接与 Notion
 
-**连接管理**首页集中管理自定义来源和平台连接，下方保留六个快捷入口。
+**首页**管理已连接的设备、应用和平台，并提供上传入口；**Records** 展示信息收支。
 
 **连接 Notion。** 点击 **Notion → 连接账号**，授权自己的页面，选择全部已授权内容或指定页面，即可开始同步。不需要自己创建开发者应用或填写 OAuth 密钥。
 
@@ -229,23 +236,23 @@ Notion 为内置连接；Gmail、Outlook、GitHub、Google Calendar、Linear、G
 
 ## 软件更新
 
-当前 v0.1.7 为 **修订版 14（r14）**：新增 friend. 账号登录（**设置 → 模型接口 → 登录**，在浏览器中确认代码；之后模型由账号提供并按用量从余额扣费，退出登录后恢复手动配置）、默认中转提供的向量模型、托管平台连接、在配置的服务器上转写原始音频，以及记忆卡片预览。
+当前版本为 **0.1.8**，合并首页、Records、语言包、连接身份和长文件处理，界面不再增加 r 后缀。
 
 在 **设置 → 个人记忆库 → 软件更新** 中更新。发现新版时网页会提示；选择 **更新并重启** 后，先校验安装包、备份本地记忆和配置，再更新并检查启动结果。不需要云端账号，已有数据和连接继续保留。详见[更新与恢复说明][updates]。
 
 > [!NOTE]
-> 最初的 v0.1.7 没有更新入口，需要手动安装一次当前修订版。可用 `--build-info` 核对 revision 14。标准文件名对应当前安装包；`r1-*` 至 `r4-*` 文件保留此前构建，用于恢复。
+> 最初的 v0.1.7 没有更新入口，需手动安装一次 0.1.8。首次从 0.1.7 升级前，先完整备份数据目录。内部清单保留 `revision: 1` 以兼容旧更新器；历史 Release 继续保留。
 
 ## 关于本仓库
 
 这是 friend. Memory（可执行程序名为 `openworld-memory`）的公开分发仓库，只保存文档，不公开完整应用源码。
 
-[Release 附件][releases]包括编译程序、轻量安装器、friend. 安卓 App（调试签名的演示版本）、校验文件和许可说明；**不包含**完整源码、内部交接文档或示例数据集。适用的许可文本附在每个平台安装包内；公开二进制并不表示全部组件已经开源。
+[Release 附件][releases]包括编译程序、轻量安装器、校验文件和许可说明；**不包含**完整源码、内部交接文档或示例数据集。适用的许可文本附在每个平台安装包内；公开二进制并不表示全部组件已经开源。
 
-[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.7
+[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8
 [releases]: https://github.com/OpenWorld-Agent/friend./releases
-[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/MCP-POLICY.md
-[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/MOBILE-VOICE.md
-[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/CONNECTORS.md
-[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/SOURCE-API.md
-[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/UPDATES.md
+[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MCP-POLICY.md
+[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MOBILE-VOICE.md
+[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/CONNECTORS.md
+[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/SOURCE-API.md
+[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/UPDATES.md
