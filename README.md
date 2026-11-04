@@ -22,6 +22,8 @@ Keep your conversations, meeting notes and everyday records in one place, decide
 
 ## Install
 
+> **Service status:** The Friend account service is currently unreachable. GitHub downloads and local installation are independent of it; account sign-in, account models and hosted authorization need the service to recover. A working model endpoint can be configured separately when signed out. This release does not claim the cloud service has been restored.
+
 Paste this prompt into **Codex** on the computer that will hold your memory database:
 
 ```text
