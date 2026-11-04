@@ -29,13 +29,13 @@
   <img alt="服务状态" src="assets/badge-warning-zh-light.svg" height="30">
 </picture>
 
-**服务状态。** friend 账号服务当前无法连接。GitHub 下载与本机安装独立于它；账号登录、账号模型和托管授权需要等服务恢复。未登录时可以单独配置可用的模型端点。本次发布不代表云端服务已经恢复。
+**服务状态 · 2026 年 11 月 4 日。** 官网和平台授权服务已迁到新服务器。账号、余额/付款及账号模型入口仍返回 `account_upstream_pending_team_review`，等待团队接回。GitHub 下载和本机安装独立可用。迁移测试 Mac 的现有连接已验证，不等于所有用户和正式公开接入都已恢复。未登录时可以单独配置可用的模型端点。
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/glance-zh-dark.svg">
-  <img alt="版本 0.1.8，存储在你的电脑上，本机 WebUI 界面，MCP 提供七个工具。" src="assets/glance-zh-light.svg" width="100%">
+  <img alt="版本 0.1.9，存储在你的电脑上，本机 WebUI 界面，MCP 提供七个工具。" src="assets/glance-zh-light.svg" width="100%">
 </picture>
 
 </div>
@@ -97,9 +97,9 @@ friend. Memory 不绑定任何单一 Agent。它通过 **stdio MCP** 提供七�
 把下面的提示词发给你**已经在用的那个 Agent**，在要存放记忆库的那台电脑上执行：
 
 ```text
-从公开发布页 https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8 安装 friend. Memory v0.1.8。
+从公开发布页 https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.9 安装 friend. Memory v0.1.9。
 下载 Release 附件 `install.py` 和 `SHA256SUMS`，核对安装器的 SHA-256，
-然后运行 `python3 install.py --version v0.1.8 --clients codex,claude --start --autostart`
+然后运行 `python3 install.py --version v0.1.9 --clients codex,claude --start --autostart`
 （Windows 也可用 `py -3 install.py`）。
 从 0.1.7 首次升级前，先完整备份现有数据目录。
 如果旧版 WebUI 正在运行，替换程序前先停止；保留现有记忆数据和 Codex／Claude 的 MCP 配置。
@@ -132,7 +132,7 @@ friend. Memory 不绑定任何单一 Agent。它通过 **stdio MCP** 提供七�
 
 <br>
 
-1. 从 [v0.1.8 Release][release] 下载 `install.py` 和 `SHA256SUMS`。
+1. 从 [v0.1.9 Release][release] 下载 `install.py` 和 `SHA256SUMS`。
 2. 计算安装器的校验值，与 `SHA256SUMS` 中对应的一行比对：
 
    ```text
@@ -144,7 +144,7 @@ friend. Memory 不绑定任何单一 Agent。它通过 **stdio MCP** 提供七�
 3. 运行安装器：
 
    ```bash
-   python3 install.py --version v0.1.8 --clients codex,claude --start --autostart
+   python3 install.py --version v0.1.9 --clients codex,claude --start --autostart
    ```
 
 安装器接下来会：
@@ -166,9 +166,9 @@ friend. Memory 不绑定任何单一 Agent。它通过 **stdio MCP** 提供七�
 <br>
 
 ```text
-openworld-memory-v0.1.8-macos-arm64.tar.gz
-openworld-memory-v0.1.8-linux-x86_64.tar.gz
-openworld-memory-v0.1.8-windows-x86_64.zip
+openworld-memory-v0.1.9-macos-arm64.tar.gz
+openworld-memory-v0.1.9-linux-x86_64.tar.gz
+openworld-memory-v0.1.9-windows-x86_64.zip
 ```
 
 </details>
@@ -194,13 +194,15 @@ openworld-memory-v0.1.8-windows-x86_64.zip
 
 <br>
 
-## 03 · 0.1.8 新内容
+## 03 · 首页、Records 与 0.1.9 修复
+
+0.1.9 修复共享网络耗尽 GitHub 接口额度时的安装和检查更新失败。改走官方公开下载路径时，继续校验版本清单、文件摘要和程序身份。0.1.8 的首页和 Records 功能继续保留。
 
 首页与 Records 取代了旧的记忆原文页面。Records 展示收到和提供的数据、缓存的英中摘要，以及来源与后续使用之间的关联。详情在悬浮卡片中打开。已连接的应用和设备归到各自的连接之下；Mac 上 Codex 与 Claude Code 的聊天接收需要在那里明确开启。已有记忆和设置保留。
 
 缺少交接凭证的旧记忆，不会被编造成历史交易。
 
-模型生成的摘要需要可用的模型服务。本次验收无法完成新的真实账号模型闭环，因为测试用的 Mac 访问不到账号端点；最新状态见 Release 说明。独立的 Linux Mem0 聊天实验需要单独从源码安装额外依赖，标准安装包不会启用它。
+模型生成的摘要需要可用的模型服务。账号入口仍等待团队接回，因此未声称新的真实账号模型闭环通过；最新状态见 Release 说明。独立的 Linux Mem0 聊天实验需要单独从源码安装额外依赖，标准安装包不会启用它。
 
 <div align="center">
 
@@ -271,7 +273,7 @@ memory_sources
 
 ## 05 · 手机录音
 
-friend. Memory v0.1.8 自己接收手机录音，不需要另外运行接收程序。
+friend. Memory v0.1.9 自己接收手机录音，不需要另外运行接收程序。
 
 <div align="center">
 
@@ -442,7 +444,7 @@ POST /api/sources/{source_id}/events     -> 每个来源的令牌
 
 ## 09 · 更新
 
-版本 **0.1.8** 合并了首页、Records、语言包、已注册连接和长文件处理。界面统一使用一个版本号，不再带 r 后缀。
+版本 **0.1.9** 修复 GitHub 限额导致的更新失败，并保留首页、Records、语言包、已注册连接和长文件处理。界面统一使用一个版本号，不再带 r 后缀。
 
 在 **设置 → 记忆库 → 软件更新** 中更新。新版本会在 WebUI 中提示。**更新并重启**会校验安装包、备份本地记忆和配置，并检查重启后的应用状态。不需要云端账号，已有连接和本地数据都会保留。详见[更新与恢复说明][updates]。
 
@@ -451,7 +453,7 @@ POST /api/sources/{source_id}/events     -> 每个来源的令牌
   <img alt="注意" src="assets/badge-note-zh-light.svg" height="30">
 </picture>
 
-最初的 v0.1.7 没有更新器，需要手动安装一次 0.1.8。首次从 0.1.7 升级前，先备份完整的数据目录。内部构建清单保留 `revision: 1` 以保持兼容。历史版本仍然可用，供回滚使用。
+旧更新器若因 GitHub 限额无法检查版本，可用此 Release 的安装器或独立程序先升级一次。最初的 v0.1.7 没有更新器，需要手动安装一次 0.1.9。首次从 0.1.7 升级前，先备份完整的数据目录。内部构建清单保留 `revision: 1` 以保持兼容。历史版本仍然可用，供回滚使用。
 
 <div align="center">
 
@@ -476,10 +478,10 @@ POST /api/sources/{source_id}/events     -> 每个来源的令牌
 <sub><a href="#top">回到顶部</a> &nbsp;·&nbsp; <a href="README.md">English</a> &nbsp;·&nbsp; <a href="https://friend.open-world.cn/app/">friend.open-world.cn</a></sub>
 </div>
 
-[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8
+[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.9
 [releases]: https://github.com/OpenWorld-Agent/friend./releases
-[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MCP-POLICY.md
-[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MOBILE-VOICE.md
-[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/CONNECTORS.md
-[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/SOURCE-API.md
-[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/UPDATES.md
+[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/MCP-POLICY.md
+[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/MOBILE-VOICE.md
+[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/CONNECTORS.md
+[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/SOURCE-API.md
+[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/UPDATES.md

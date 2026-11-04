@@ -31,13 +31,13 @@ Keep your conversations, meeting notes and everyday records in one place, decide
   <img alt="Service status" src="assets/badge-warning-light.svg" height="30">
 </picture>
 
-**Service status.** The Friend account service is currently unreachable. GitHub downloads and local installation are independent of it; account sign-in, account models and hosted authorization need the service to recover. A working model endpoint can be configured separately when signed out. This release does not claim the cloud service has been restored.
+**Service status — November 4, 2026.** The website and platform authorization brokers have moved to the replacement server. The account, balance/payment and account-model API still returns `account_upstream_pending_team_review`; those services await the team’s backend handoff. GitHub downloads and local installation work independently. Existing connections on the migration test Mac were checked; this does not establish recovery for every user or production onboarding. A working model endpoint can be configured separately when signed out.
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/glance-en-dark.svg">
-  <img alt="Version 0.1.8, storage on your computer, a local WebUI, and MCP with seven tools." src="assets/glance-en-light.svg" width="100%">
+  <img alt="Version 0.1.9, storage on your computer, a local WebUI, and MCP with seven tools." src="assets/glance-en-light.svg" width="100%">
 </picture>
 
 </div>
@@ -105,10 +105,10 @@ friend. Memory is not tied to any one agent. It exposes its seven tools over **s
 Paste this prompt into **whichever agent you already use** on the computer that will hold your memory database:
 
 ```text
-Install friend. Memory v0.1.8 from the public release at
-https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8.
+Install friend. Memory v0.1.9 from the public release at
+https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.9.
 Download the `install.py` and `SHA256SUMS` release assets, verify the installer's SHA-256,
-then run `python3 install.py --version v0.1.8 --clients codex,claude --start --autostart`
+then run `python3 install.py --version v0.1.9 --clients codex,claude --start --autostart`
 (on Windows, `py -3 install.py` also works).
 Back up the complete existing data directory before upgrading from 0.1.7.
 If an older WebUI is running, stop it before replacing the executable;
@@ -144,7 +144,7 @@ There is no native Intel Mac package in this release. The installer needs Python
 
 <br>
 
-1. Download `install.py` and `SHA256SUMS` from the [v0.1.8 release][release].
+1. Download `install.py` and `SHA256SUMS` from the [v0.1.9 release][release].
 2. Hash the installer and compare it with its line in `SHA256SUMS`:
 
    ```text
@@ -156,7 +156,7 @@ There is no native Intel Mac package in this release. The installer needs Python
 3. Run the installer:
 
    ```bash
-   python3 install.py --version v0.1.8 --clients codex,claude --start --autostart
+   python3 install.py --version v0.1.9 --clients codex,claude --start --autostart
    ```
 
 The installer then:
@@ -180,9 +180,9 @@ You can also extract a native archive yourself and run `./openworld-memory setup
 <br>
 
 ```text
-openworld-memory-v0.1.8-macos-arm64.tar.gz
-openworld-memory-v0.1.8-linux-x86_64.tar.gz
-openworld-memory-v0.1.8-windows-x86_64.zip
+openworld-memory-v0.1.9-macos-arm64.tar.gz
+openworld-memory-v0.1.9-linux-x86_64.tar.gz
+openworld-memory-v0.1.9-windows-x86_64.zip
 ```
 
 </details>
@@ -210,13 +210,15 @@ openworld-memory-v0.1.8-windows-x86_64.zip
 
 <br>
 
-## 03 · New in 0.1.8
+## 03 · Home, Records and the 0.1.9 repair
+
+0.1.9 fixes installation and update checks when a shared network exhausts GitHub’s anonymous API quota. It uses the official public release assets and retains manifest, checksum and executable verification. The 0.1.8 Home and Records features remain in place.
 
 Home and Records replace the old raw-memory page. Records shows received and provided data, cached Chinese/English summaries and links between incoming sources and later uses. Details open in floating cards. Connected applications and devices appear under their own connections; Mac Codex and Claude Code chat reception can be enabled there explicitly. Existing memories and settings are retained.
 
 Old memories without handoff evidence are not invented into historical transactions.
 
-Model-generated summaries need a reachable configured model service. The release acceptance could not complete a new live account-model loop because the account endpoint was unreachable from the test Mac; see the release notes for the latest status. The separate Linux Mem0 chat pilot requires its explicit source installation and extra dependencies; it is not enabled in these standard native packages.
+Model-generated summaries need a reachable configured model service. The account API is still waiting for the team’s backend handoff, so a new live account-model loop is not claimed as passed; see the release notes for the latest status. The separate Linux Mem0 chat pilot requires its explicit source installation and extra dependencies; it is not enabled in these standard native packages.
 
 <div align="center">
 
@@ -289,7 +291,7 @@ memory_sources
 
 ## 05 · Phone recordings
 
-friend. Memory v0.1.8 receives phone recordings itself; no separate receiver program is needed.
+friend. Memory v0.1.9 receives phone recordings itself; no separate receiver program is needed.
 
 <div align="center">
 
@@ -468,7 +470,7 @@ See the [source API contract and examples][source-api], including Windows PowerS
 
 ## 09 · Updates
 
-Version **0.1.8** combines Home, Records, language packages, registered connections and long-file processing. The interface uses one version number without an r suffix.
+Version **0.1.9** repairs GitHub rate-limit failures and retains Home, Records, language packages, registered connections and long-file processing. The interface uses one version number without an r suffix.
 
 Update from **Settings → Memory library → Software updates**. New versions are announced in the WebUI. **Update and restart** verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required, and existing connections and local data are kept. See the [update and recovery guide][updates].
 
@@ -477,7 +479,7 @@ Update from **Settings → Memory library → Software updates**. New versions a
   <img alt="Note" src="assets/badge-note-light.svg" height="30">
 </picture>
 
-The original v0.1.7 build has no updater; install 0.1.8 once manually. Back up your complete data directory before the first upgrade from 0.1.7. The internal build manifest retains ``revision: 1`` for compatibility. Previous releases remain available for recovery.
+If an older updater cannot check releases because of the GitHub quota, use this release’s installer or archive once. The original v0.1.7 build has no updater; install 0.1.9 once manually. Back up your complete data directory before the first upgrade from 0.1.7. The internal build manifest retains ``revision: 1`` for compatibility. Previous releases remain available for recovery.
 
 <div align="center">
 
@@ -504,10 +506,10 @@ This is the public distribution repository for friend. Memory (the `openworld-me
 
 <br>
 
-[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8
+[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.9
 [releases]: https://github.com/OpenWorld-Agent/friend./releases
-[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MCP-POLICY.md
-[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MOBILE-VOICE.md
-[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/CONNECTORS.md
-[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/SOURCE-API.md
-[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/UPDATES.md
+[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/MCP-POLICY.md
+[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/MOBILE-VOICE.md
+[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/CONNECTORS.md
+[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/SOURCE-API.md
+[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.9/UPDATES.md
