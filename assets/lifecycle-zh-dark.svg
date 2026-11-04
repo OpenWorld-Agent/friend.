@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 302" width="1280" height="302" role="img" aria-label="告诉 Codex 的一条事实被保存为待审核的本机记忆，之后 Claude Code 可以直接答出，用户无需重复解释。">
+<defs>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FF7A70" stop-opacity=".55"/>
+    <stop offset=".45" stop-color="#FF7A70" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#FF7A70" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2B323C"/>
+    <stop offset="1" stop-color="#1B2129"/>
+  </linearGradient>
+  <linearGradient id="cardAltGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#39424F"/>
+    <stop offset="1" stop-color="#262E38"/>
+  </linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="rgba(1,4,9,.62)" flood-opacity="1"/>
+  </filter>
+  <filter id="softSm" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="rgba(1,4,9,.62)" flood-opacity=".8"/>
+  </filter></defs>
+<style>
+  .s{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI Variable Display', 'Segoe UI', 'Helvetica Neue', Arial, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif}
+  .m{font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', 'Microsoft YaHei', monospace}
+  .rise{opacity:0;animation:rise .9s cubic-bezier(.16,.84,.32,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+  @keyframes breathe{0%,100%{opacity:.45;transform:scale(.96)}50%{opacity:.9;transform:scale(1.05)}}
+  @keyframes breathe2{
+    0%{opacity:.05;transform:scale(.93);animation-timing-function:cubic-bezier(.66,0,.34,1)}
+    18%{opacity:.12;transform:scale(1.03);animation-timing-function:cubic-bezier(.37,0,.63,1)}
+    34%{opacity:.07;transform:scale(.99);animation-timing-function:cubic-bezier(.45,0,.55,1)}
+    57%{opacity:.15;transform:scale(1.085);animation-timing-function:cubic-bezier(.3,0,.7,1)}
+    72%{opacity:.088;transform:scale(1.008);animation-timing-function:cubic-bezier(.6,0,.4,1)}
+    88%{opacity:.126;transform:scale(1.052);animation-timing-function:cubic-bezier(.5,0,.5,1)}
+    100%{opacity:.05;transform:scale(.93)}
+  }
+  @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.5}}
+  .tw{animation:twinkle 9s ease-in-out infinite}
+  .snr{animation:snr 5.4s cubic-bezier(.16,.84,.32,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes snr{0%{transform:scale(.5);opacity:.55}65%{opacity:0}100%{transform:scale(1.6);opacity:0}}
+  .swp{animation-timing-function:cubic-bezier(.83,0,.17,1);animation-iteration-count:infinite;opacity:0}
+  .march{animation:march 1.65s linear infinite}
+  .dp{animation:dotpulse 2.6s ease-in-out infinite}
+  @keyframes dotpulse{0%,100%{opacity:.42}50%{opacity:1}}
+  @keyframes march{to{stroke-dashoffset:-24}}
+  .scan{animation:scan 4s cubic-bezier(.83,0,.17,1) infinite;opacity:0}
+  @keyframes scan{0%{transform:translateX(0);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateX(1140px);opacity:0}}
+  @media (prefers-reduced-motion: reduce){
+    .rise{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}
+    .tw{animation:none!important;opacity:.55!important}
+    .snr,.swp,.scan{animation:none!important;opacity:0!important}
+    .march{animation:none!important}
+    .dp{animation:none!important;opacity:1!important}
+  }</style>
+
+<rect width="1280" height="302" fill="#0D1117"/>
+<text x="40" y="46" font-size="13" font-weight="700" fill="#6F7B89" class="m">01</text>
+    <text x="70" y="46" font-size="13" font-weight="700" fill="#6F7B89" letter-spacing="1.6" class="s">告知</text><text x="462" y="46" font-size="13" font-weight="700" fill="#6F7B89" class="m">02</text>
+    <text x="492" y="46" font-size="13" font-weight="700" fill="#6F7B89" letter-spacing="1.6" class="s">保存</text><text x="930" y="46" font-size="13" font-weight="700" fill="#6F7B89" class="m">03</text>
+    <text x="960" y="46" font-size="13" font-weight="700" fill="#6F7B89" letter-spacing="1.6" class="s">取用</text>
+
+<path id="lc1" d="M350,172 C384,172 428,172 462,172" fill="none" stroke="#3E4855" stroke-width="1.6" stroke-dasharray="3 7" class="march"/>
+<path id="lc2" d="M818,172 C852,172 896,172 930,172" fill="none" stroke="#3E4855" stroke-width="1.6" stroke-dasharray="3 7" class="march"/>
+<text x="406" y="157" font-size="12" font-weight="600" fill="#6F7B89" text-anchor="middle" class="m">memory_add</text>
+<text x="874" y="157" font-size="12" font-weight="600" fill="#6F7B89" text-anchor="middle" class="m">memory_search</text>
+<g>
+  <animateMotion dur="1.25s" begin="0s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#lc1"/></animateMotion>
+  <circle r="10.920000000000002" fill="#FF6B63" opacity="0"><animate attributeName="r" values="4.37;10.920000000000002;10.920000000000002;4.37" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="0s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#FF6B63" opacity="0"><animate attributeName="r" values="1.47;4.2;4.2;1.47" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="0s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.25s" begin="-0.62s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#lc1"/></animateMotion>
+  <circle r="10.920000000000002" fill="#FF6B63" opacity="0"><animate attributeName="r" values="4.37;10.920000000000002;10.920000000000002;4.37" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="-0.62s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="-0.62s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#FF6B63" opacity="0"><animate attributeName="r" values="1.47;4.2;4.2;1.47" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="-0.62s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.25s" begin="-0.62s" repeatCount="indefinite"/></circle>
+</g>
+<g>
+  <animateMotion dur="1.4s" begin="-0.29s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#lc2"/></animateMotion>
+  <circle r="10.920000000000002" fill="#FF6B63" opacity="0"><animate attributeName="r" values="4.37;10.920000000000002;10.920000000000002;4.37" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.29s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.29s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#FF6B63" opacity="0"><animate attributeName="r" values="1.47;4.2;4.2;1.47" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.29s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.29s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.4s" begin="-0.98s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#lc2"/></animateMotion>
+  <circle r="10.920000000000002" fill="#FF6B63" opacity="0"><animate attributeName="r" values="4.37;10.920000000000002;10.920000000000002;4.37" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.98s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.98s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#FF6B63" opacity="0"><animate attributeName="r" values="1.47;4.2;4.2;1.47" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.98s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.4s" begin="-0.98s" repeatCount="indefinite"/></circle>
+</g>
+
+<g filter="url(#softSm)">
+  <rect x="40" y="66" width="310" height="212" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/>
+  <g transform="translate(66 100)"><g fill="none" stroke="#FF6B63" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-6.6 -4.84 l4.62 4.84 l-4.62 4.84"/>
+    <path d="M0.88 5.279999999999999 h5.720000000000001"/></g></g>
+  <text x="96" y="108" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Codex</text>
+  <line x1="62" y1="128" x2="328" y2="128" stroke="#3E4855" stroke-width="1" stroke-linecap="round" />
+  <rect x="62" y="144" width="266" height="72" rx="12" fill="#141A21" />
+  <text x="80" y="174" font-size="18" font-weight="400" fill="#D2DBE5" class="s">“我们三月搬到了</text>
+  <text x="80" y="198" font-size="18" font-weight="400" fill="#D2DBE5" class="s">里斯本。”</text>
+  <text x="64" y="250" font-size="16" font-weight="400" fill="#6F7B89" class="s">一次说清、长期有效的事实</text>
+</g>
+
+<g filter="url(#softSm)">
+  <rect x="462" y="66" width="356" height="212" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/>
+  <g transform="translate(508 102)"><g transform="scale(0.13)">
+  <path fill="#FF6B63" d="M10,-99.499A100 100 0 0 1 99.499,-10L58.146,-10A59 59 0 0 0 10,-58.146Z"/>
+  <path fill="#F5F8FB" d="M99.499,10A100 100 0 0 1 10,99.499L10,58.146A59 59 0 0 0 58.146,10Z"/>
+  <path fill="#F5F8FB" d="M-10,99.499A100 100 0 0 1 -99.499,10L-58.146,10A59 59 0 0 0 -10,58.146Z"/>
+  <path fill="#F5F8FB" d="M-99.499,-10A100 100 0 0 1 -10,-99.499L-10,-58.146A59 59 0 0 0 -58.146,-10Z"/></g></g>
+  <text x="528" y="110" font-size="21" font-weight="650" fill="#F5F8FB" class="s">friend. Memory</text>
+  <line x1="484" y1="128" x2="796" y2="128" stroke="#3E4855" stroke-width="1" stroke-linecap="round" />
+  <rect x="484" y="144" width="312" height="54" rx="12" fill="#3C1C18" />
+  <circle cx="506" cy="171" r="4" fill="#FF6B63" />
+  <text x="522" y="178" font-size="17" font-weight="600" fill="#FF6B63" class="m">lives_in: 里斯本</text>
+  <text x="484" y="224" font-size="16" font-weight="400" fill="#9DA9B7" class="s">待你审核后才生效</text>
+  <text x="484" y="246" font-size="16" font-weight="400" fill="#9DA9B7" class="s">可随时修改或删除</text>
+</g>
+
+<g filter="url(#softSm)">
+  <rect x="930" y="66" width="310" height="212" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/>
+  <g transform="translate(956 100)"><g><line x1="0" y1="0" x2="0" y2="-9.24" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="2.33" y2="-2.33" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="9.24" y2="0" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="2.33" y2="2.33" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="9.24" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="-2.33" y2="2.33" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="-9.24" y2="0" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/><line x1="0" y1="0" x2="-2.33" y2="-2.33" stroke="#FF6B63" stroke-width="2.42" stroke-linecap="round"/></g></g>
+  <text x="986" y="108" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Claude Code</text>
+  <line x1="952" y1="128" x2="1218" y2="128" stroke="#3E4855" stroke-width="1" stroke-linecap="round" />
+  <text x="952" y="164" font-size="18" font-weight="400" fill="#9DA9B7" class="s">“他们住哪儿？”</text>
+  <rect x="952" y="180" width="266" height="52" rx="12" fill="url(#cardAltGrad)" stroke="#3E4855" stroke-width="1"/>
+  <text x="972" y="213" font-size="19" font-weight="600" fill="#F5F8FB" class="s">里斯本。</text>
+  <circle cx="1190" cy="206" r="14" fill="#8FBE9E" opacity=".14"/>
+  <g transform="translate(1190 206)"><g fill="none" stroke="#8FBE9E" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"><path d="M-6.16 0 l4.18 4.62 l8.36 -9.24"/></g></g>
+  <text x="952" y="258" font-size="16" font-weight="400" fill="#6F7B89" class="s">无需重复解释</text>
+</g>
+
+
+</svg>

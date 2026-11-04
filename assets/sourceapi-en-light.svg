@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 266" width="1280" height="266" role="img" aria-label="Source API: register a source with the WebUI admin token, then submit events with a per-source write-only token.">
+<defs>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FF7A70" stop-opacity=".55"/>
+    <stop offset=".45" stop-color="#FF7A70" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#FF7A70" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset="1" stop-color="#FFFFFF"/>
+  </linearGradient>
+  <linearGradient id="cardAltGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F6F8FA"/>
+    <stop offset="1" stop-color="#F6F8FA"/>
+  </linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="rgba(31,35,40,.13)" flood-opacity="1"/>
+  </filter>
+  <filter id="softSm" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="rgba(31,35,40,.13)" flood-opacity=".8"/>
+  </filter></defs>
+<style>
+  .s{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI Variable Display', 'Segoe UI', 'Helvetica Neue', Arial, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif}
+  .m{font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', 'Microsoft YaHei', monospace}
+  .rise{opacity:0;animation:rise .9s cubic-bezier(.16,.84,.32,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+  @keyframes breathe{0%,100%{opacity:.45;transform:scale(.96)}50%{opacity:.9;transform:scale(1.05)}}
+  @keyframes breathe2{
+    0%{opacity:.05;transform:scale(.93);animation-timing-function:cubic-bezier(.66,0,.34,1)}
+    18%{opacity:.12;transform:scale(1.03);animation-timing-function:cubic-bezier(.37,0,.63,1)}
+    34%{opacity:.07;transform:scale(.99);animation-timing-function:cubic-bezier(.45,0,.55,1)}
+    57%{opacity:.15;transform:scale(1.085);animation-timing-function:cubic-bezier(.3,0,.7,1)}
+    72%{opacity:.088;transform:scale(1.008);animation-timing-function:cubic-bezier(.6,0,.4,1)}
+    88%{opacity:.126;transform:scale(1.052);animation-timing-function:cubic-bezier(.5,0,.5,1)}
+    100%{opacity:.05;transform:scale(.93)}
+  }
+  @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.5}}
+  .tw{animation:twinkle 9s ease-in-out infinite}
+  .snr{animation:snr 5.4s cubic-bezier(.16,.84,.32,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes snr{0%{transform:scale(.5);opacity:.55}65%{opacity:0}100%{transform:scale(1.6);opacity:0}}
+  .swp{animation-timing-function:cubic-bezier(.83,0,.17,1);animation-iteration-count:infinite;opacity:0}
+  .march{animation:march 1.65s linear infinite}
+  .dp{animation:dotpulse 2.6s ease-in-out infinite}
+  @keyframes dotpulse{0%,100%{opacity:.42}50%{opacity:1}}
+  @keyframes march{to{stroke-dashoffset:-24}}
+  .scan{animation:scan 4s cubic-bezier(.83,0,.17,1) infinite;opacity:0}
+  @keyframes scan{0%{transform:translateX(0);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateX(1140px);opacity:0}}
+  @media (prefers-reduced-motion: reduce){
+    .rise{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}
+    .tw{animation:none!important;opacity:.55!important}
+    .snr,.swp,.scan{animation:none!important;opacity:0!important}
+    .march{animation:none!important}
+    .dp{animation:none!important;opacity:1!important}
+  }@keyframes swp{0%{transform:translateX(0);opacity:0}18%{opacity:1}82%{opacity:1}100%{transform:translateX(480px);opacity:0}}</style>
+
+<rect width="1280" height="266" fill="#FFFFFF"/>
+<g filter="url(#softSm)"><rect x="40" y="40" width="588" height="182" rx="20" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/></g>
+<text x="66" y="84" font-size="21" font-weight="600" fill="#0D1117" class="s">Register a source</text>
+<rect x="66" y="100" width="62" height="26" rx="7" fill="#FF4B47" />
+<text x="97" y="118" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" class="m">POST</text>
+<rect x="138" y="100" width="464" height="26" rx="7" fill="#F6F8FA" />
+<text x="150" y="118" font-size="14" font-weight="400" fill="#3D444D" class="m">/api/sources</text>
+<text x="66" y="164" font-size="13" font-weight="700" fill="#8B949E" letter-spacing="1.4" class="s">TOKEN</text>
+<text x="66" y="192" font-size="17" font-weight="500" fill="#59636E" class="s">WebUI admin token</text><g filter="url(#softSm)"><rect x="652" y="40" width="588" height="182" rx="20" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/></g>
+<text x="678" y="84" font-size="21" font-weight="600" fill="#0D1117" class="s">Submit events</text>
+<rect x="678" y="100" width="62" height="26" rx="7" fill="#FF4B47" />
+<text x="709" y="118" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" class="m">POST</text>
+<rect x="750" y="100" width="464" height="26" rx="7" fill="#F6F8FA" />
+<text x="762" y="118" font-size="14" font-weight="400" fill="#3D444D" class="m">/api/sources/{source_id}/events</text>
+<text x="678" y="164" font-size="13" font-weight="700" fill="#8B949E" letter-spacing="1.4" class="s">TOKEN</text>
+<text x="678" y="192" font-size="17" font-weight="500" fill="#59636E" class="s">Source token</text>
+<text x="640" y="252" font-size="18" font-weight="400" fill="#8B949E" text-anchor="middle" class="s">Rotation and revocation endpoints are also provided.</text>
+</svg>

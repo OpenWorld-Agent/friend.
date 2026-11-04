@@ -5,29 +5,108 @@
   <img alt="friend. Open your world to your agent." src="assets/hero-light.svg" width="100%">
 </picture>
 
-<h3>Your personal data wallet for AI.</h3>
+### Your personal data wallet for AI.
 
 Keep your conversations, meeting notes and everyday records in one place, decide what to share, and connect it to your agents through MCP, so they understand you without being told everything from scratch.
 
-[**Install**](#install) &nbsp;·&nbsp; [Releases][releases] &nbsp;·&nbsp; [Website](https://friend.open-world.cn/app/) &nbsp;·&nbsp; [Chinese](README-zh.md)
+[**Install**](#02--install) &nbsp;·&nbsp; [Releases][releases] &nbsp;·&nbsp; [Website](https://friend.open-world.cn/app/) &nbsp;·&nbsp; [Chinese](README-zh.md)
 
 <br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-en-dark.svg">
-  <img alt="Files, phone recordings, Notion and the source API flow into friend. Data on your computer, which serves Codex, Claude Code and Claude Desktop over MCP." src="assets/architecture-en-light.svg" width="100%">
+  <img alt="Files, phone recordings, Notion and the source API flow into friend. Memory on your computer, which serves Codex, Code Claude and Claude Desktop over MCP." src="assets/architecture-en-light.svg" width="100%">
+</picture>
+
+<sub>Four kinds of input, one local store, and any agent that speaks MCP.</sub>
+
+</div>
+
+<br>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-warning-dark.svg">
+  <img alt="Service status" src="assets/badge-warning-light.svg" height="30">
+</picture>
+
+**Service status.** The Friend account service is currently unreachable. GitHub downloads and local installation are independent of it; account sign-in, account models and hosted authorization need the service to recover. A working model endpoint can be configured separately when signed out. This release does not claim the cloud service has been restored.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/glance-en-dark.svg">
+  <img alt="Version 0.1.8, storage on your computer, a local WebUI, and MCP with seven tools." src="assets/glance-en-light.svg" width="100%">
 </picture>
 
 </div>
 
-## Install
+<br>
 
-> **Service status:** The Friend account service is currently unreachable. GitHub downloads and local installation are independent of it; account sign-in, account models and hosted authorization need the service to recover. A working model endpoint can be configured separately when signed out. This release does not claim the cloud service has been restored.
+<br>
 
-Paste this prompt into **Codex** on the computer that will hold your memory database:
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 01 · What it does
+
+A wallet, not a cloud. Everything below runs on the computer you already own, and your agents reach it over MCP with your permission.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/capabilities-en-dark.svg">
+  <img alt="Six capabilities: local memory, files with evidence, MCP for Codex and Claude, phone recordings, Notion sync, and configurable models." src="assets/capabilities-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+<br>
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/lifecycle-en-dark.svg">
+  <img alt="A fact told to Codex is saved once into local memory as a reviewable candidate, then answered by Claude Code later without the user re-explaining it." src="assets/lifecycle-en-light.svg" width="100%">
+</picture>
+
+<sub>Tell once. The next agent already knows.</sub>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 02 · Install
+
+friend. Memory is not tied to any one agent. It exposes its seven tools over **stdio MCP**, so any MCP-capable client can use it; the installer happens to configure Codex and Claude for you, and everything else can reach the same local instance through the authenticated HTTP MCP endpoint in the WebUI.
+
+Paste this prompt into **whichever agent you already use** on the computer that will hold your memory database:
 
 ```text
-Install friend. Memory v0.1.8 from the public release at https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8.
+Install friend. Memory v0.1.8 from the public release at
+https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8.
 Download the `install.py` and `SHA256SUMS` release assets, verify the installer's SHA-256,
 then run `python3 install.py --version v0.1.8 --clients codex,claude --start --autostart`
 (on Windows, `py -3 install.py` also works).
@@ -39,29 +118,36 @@ Let me enter any model endpoints or API keys in the WebUI.
 Do not request access to the private source repository.
 ```
 
-Then **restart Codex and Claude** so they load the new MCP configuration.
+Then **restart that agent** so it loads the new MCP configuration.
 
-| Platform | Native package | Requirements |
-| --- | --- | --- |
-| macOS, Apple Silicon | `openworld-memory-v0.1.8-macos-arm64.tar.gz` | macOS 14 or later |
-| Linux, x86_64 | `openworld-memory-v0.1.8-linux-x86_64.tar.gz` | glibc 2.35 or later (for example, Ubuntu 22.04+) |
-| Windows, x64 | `openworld-memory-v0.1.8-windows-x86_64.zip` | Windows 10/11 |
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/platforms-en-dark.svg">
+  <img alt="Native packages for macOS Apple Silicon, Linux x86_64 and Windows x64, with their requirements." src="assets/platforms-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+<br>
 
 There is no native Intel Mac package in this release. The installer needs Python 3.9+; the native executable includes its own runtime.
 
 <details>
-<summary><b>Manual installation</b></summary>
+<summary><img alt="" src="assets/marker-en.svg" height="15"> <b>Manual installation</b></summary>
 
 <br>
 
 1. Download `install.py` and `SHA256SUMS` from the [v0.1.8 release][release].
 2. Hash the installer and compare it with its line in `SHA256SUMS`:
 
-   | System | Command |
-   | --- | --- |
-   | macOS | `shasum -a 256 install.py` |
-   | Linux | `sha256sum install.py` |
-   | Windows PowerShell | `Get-FileHash .\install.py -Algorithm SHA256` |
+   ```text
+   macOS              shasum -a 256 install.py
+   Linux              sha256sum install.py
+   Windows PowerShell Get-FileHash .\install.py -Algorithm SHA256
+   ```
 
 3. Run the installer:
 
@@ -82,82 +168,79 @@ You can also extract a native archive yourself and run `./openworld-memory setup
 
 </details>
 
+<br>
+
+<details>
+<summary><img alt="" src="assets/marker-en.svg" height="15"> <b>Package file names, for scripting a download</b></summary>
+
+<br>
+
+```text
+openworld-memory-v0.1.8-macos-arm64.tar.gz
+openworld-memory-v0.1.8-linux-x86_64.tar.gz
+openworld-memory-v0.1.8-windows-x86_64.zip
+```
+
+</details>
+
+<br>
+
+<br>
+
 ### First run
 
-- The WebUI listens on `http://127.0.0.1:8765/` by default. Setup prints a **private local login link**; do not share it.
-- On first login, a four-step guide covers MCP, optional model endpoints and your first upload. You can skip it and reopen it later in settings.
-- The **Chat** tab at [friend.open-world.cn/app](https://friend.open-world.cn/app/) checks for the local app and opens its WebUI. If the app is unavailable, Chat shows the installation prompt and an **Open local WebUI** button.
-- Audio and video processing requires system FFmpeg/ffprobe.
-- Switch the interface between English and Simplified Chinese in **Settings → Appearance → Language**. Enable content languages for generated Records summaries; saved translations are reused when switching languages. Originals, names, files and drafts keep their original language.
+- **WebUI.** Listens on `http://127.0.0.1:8765/` by default. Setup prints a **private local login link**; do not share it.
+- **Guided setup.** On first login, a four-step guide covers MCP, optional model endpoints and your first upload. You can skip it and reopen it later in settings.
+- **Chat tab.** The **Chat** tab at [friend.open-world.cn/app](https://friend.open-world.cn/app/) checks for the local app and opens its WebUI. If the app is unavailable, Chat shows the installation prompt and an **Open local WebUI** button.
+- **Media.** Audio and video processing requires system FFmpeg/ffprobe.
+- **Language.** Switch the interface between English and Simplified Chinese in **Settings → Appearance → Language**. Enable content languages for generated Records summaries; saved translations are reused when switching languages. Originals, names, files and drafts keep their original language.
 
-## New in 0.1.8
+<div align="center">
 
-Home and Records replace the old raw-memory page. Records shows received and provided data, cached Chinese/English summaries and links between incoming sources and later uses. Details open in floating cards. Connected applications and devices appear under their own connections; Mac Codex and Claude Code chat reception can be enabled there explicitly. Existing memories and settings are retained. Old memories without handoff evidence are not invented into historical transactions.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 03 · New in 0.1.8
+
+Home and Records replace the old raw-memory page. Records shows received and provided data, cached Chinese/English summaries and links between incoming sources and later uses. Details open in floating cards. Connected applications and devices appear under their own connections; Mac Codex and Claude Code chat reception can be enabled there explicitly. Existing memories and settings are retained.
+
+Old memories without handoff evidence are not invented into historical transactions.
 
 Model-generated summaries need a reachable configured model service. The release acceptance could not complete a new live account-model loop because the account endpoint was unreachable from the test Mac; see the release notes for the latest status. The separate Linux Mem0 chat pilot requires its explicit source installation and extra dependencies; it is not enabled in these standard native packages.
 
-## What it does
+<div align="center">
 
-<table>
-<tr>
-<td width="33%" valign="top">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
 
-**Local memory**<br>Memories and evidence are stored on your computer. Text can be saved and searched without a model or GPU.
+</div>
 
-</td>
-<td width="33%" valign="top">
+<br>
 
-**Files with evidence**<br>Upload files in the WebUI, track processing, and keep the originals and evidence links for review.
-
-</td>
-<td width="33%" valign="top">
-
-**MCP for Codex and Claude**<br>Seven memory tools over stdio MCP, plus an authenticated local HTTP MCP endpoint in the WebUI.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**Phone recordings**<br>Record with the phone's normal recorder. Each recording is encrypted on the phone and becomes a transcribed memory in about 8 seconds.
-
-</td>
-<td valign="top">
-
-**Notion sync**<br>A built-in account connector. Authorize your pages once and friend. syncs them every 15 minutes.
-
-</td>
-<td valign="top">
-
-**Models, your way**<br>Sign in with a friend. account to use text, image, embedding and speech models billed to its balance, with no keys to enter. Or configure your own compatible endpoints in the WebUI.
-
-</td>
-</tr>
-</table>
-
-## Where your data goes
-
-| Data | Where it goes |
-| --- | --- |
-| Memories, files and evidence | Your computer. |
-| Content for model processing | Only the endpoints you configure, or, when signed in to a friend. account, the account's model service at friend.open-world.cn. Review the provider's privacy policy before enabling. |
-| Phone recordings | Encrypted with AES-256-GCM on the phone. The relay never receives the key and handles only ciphertext. |
-| The friend. website | Cannot read your memory or your local access token. |
-| Installers and releases | No model weights, personal data, credentials, account authorizations or memories. |
-
-## MCP
+## 04 · MCP
 
 friend. Memory serves these tools to Codex and Claude over stdio MCP. The WebUI also serves an authenticated local HTTP MCP endpoint.
 
-| Tool | Purpose |
-| --- | --- |
-| `memory_search` | Search memories |
-| `memory_get` | Read a specific memory |
-| `memory_add` | Report a new memory |
-| `memory_update` | Revise an existing memory |
-| `memory_delete` | Delete a memory |
-| `memory_health` | Check service status |
-| `memory_sources` | List memory sources |
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/mcptools-en-dark.svg">
+  <img alt="The seven memory tools: search, get, add, update, delete, health and sources, plus an authenticated local HTTP endpoint." src="assets/mcptools-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+<br>
 
 The server gives client agents these rules:
 
@@ -170,22 +253,71 @@ Tool use ultimately depends on the client model, so these are server instruction
 
 friend. Memory preserves and validates canonical raw payloads across backends, including MemOS nested metadata and Supermemory canonical identifiers, so clients do not need backend-specific parsing.
 
-## Phone recordings
+<details>
+<summary><img alt="" src="assets/marker-en.svg" height="15"> <b>Tool names, for client configuration</b></summary>
+
+<br>
+
+```text
+memory_search
+memory_get
+memory_add
+memory_update
+memory_delete
+memory_health
+memory_sources
+```
+
+</details>
+
+<br>
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 05 · Phone recordings
 
 friend. Memory v0.1.8 receives phone recordings itself; no separate receiver program is needed.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/phone-en-dark.svg">
+  <img alt="Phone recording pipeline: recorded and encrypted on the phone, relayed as ciphertext only, decrypted and transcribed on your computer, then saved as a reviewable memory." src="assets/phone-en-light.svg" width="100%">
+</picture>
+
+<sub>The key never leaves the phone, so the relay never holds anything readable.</sub>
+
+</div>
+
+<br>
 
 1. **Install the app.** Install the friend. Android app ([Android demo APK](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/friend-v1.0.1-debug.apk); Android 10 or later).
 2. **Pair.** In the local WebUI, open **Settings → Phone recordings** and click **One-click pairing**. Nothing needs to be configured: friend. Memory has a built-in default relay and its certificate, opens a channel and shows a QR code. From a terminal, run `openworld-memory mobile pair`.
 3. **Scan.** Tap **Scan to pair** in the app and scan the QR code.
 4. **Record.** Use the phone's normal recorder. New recordings are transcribed and saved as reviewable memories.
 
-> [!WARNING]
-> The pairing QR code contains private keys. Do not screenshot or share it. It hides itself after three minutes.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-warning-dark.svg">
+  <img alt="Warning" src="assets/badge-warning-light.svg" height="30">
+</picture>
 
-**Transcription.** If no speech model is configured yet, one-click pairing also enables the public speech service behind the default relay: FireRed, with speaker labels such as Person A / Person B, and it never uses anyone's voiceprint. Each recording is decrypted on your computer and its audio is sent through the relay to that service for transcription; neither stores it. To keep audio on your own infrastructure, configure your own speech model under **Settings → Model endpoints**. One-click pairing never replaces a model you configured.
+The pairing QR code contains private keys. Do not screenshot or share it. It hides itself after three minutes.
+
+**Transcription.** If no speech model is configured yet, one-click pairing also enables the public speech service behind the default relay: FireRed, with speaker labels such as Person A / Person B, and it never uses anyone's voiceprint. Each recording is decrypted on your computer and its audio is sent through the relay to that service for transcription; neither stores it. To keep audio on your own infrastructure, configure your own speech model under **Settings → Model endpoints**.
+
+One-click pairing never replaces a model you configured.
 
 <details>
-<summary><b>Security details, your own relay, and migrating from <code>friend_receiver.py</code></b></summary>
+<summary><img alt="" src="assets/marker-en.svg" height="15"> <b>Security details, your own relay, and migrating from <code>friend_receiver.py</code></b></summary>
 
 <br>
 
@@ -203,7 +335,20 @@ See the [phone recording guide][mobile] for the protocol and security boundaries
 
 </details>
 
-## Connections and Notion
+<br>
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 06 · Connections and Notion
 
 **Home** manages your connected devices, applications and platforms, and provides file upload. **Records** shows information handoffs.
 
@@ -214,43 +359,146 @@ See the [phone recording guide][mobile] for the protocol and security boundaries
 - **Disconnect** stops new reads and revokes access. Saved memories are kept.
 - **Limits.** Authorized-content discovery is limited by Notion's API, so this is not a guaranteed complete workspace backup. Attachments and media are not downloaded or transcribed; incomplete content is reported.
 
-Notion is built in. Hosted connections for Gmail, Outlook, GitHub, Google Calendar, Linear, Google Drive and Zoom appear in the platform section once the hosted connection service enables them. Existing external bridge registrations remain under **Custom devices and platforms**. A fresh installation shows **Connect**; an authorized installation shows **Manage connection** based on its own local state. See the [connection guide][connectors].
+Notion is built in. Hosted connections for Gmail, Outlook, GitHub, Google Calendar, Linear, Google Drive and Zoom appear in the platform section once the hosted connection service enables them. Existing external bridge registrations remain under **Custom devices and platforms**. A fresh installation shows **Connect**; an authorized installation shows **Manage connection** based on its own local state.
 
-## For developers: information-source API
+See the [connection guide][connectors].
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 07 · Where your data goes
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/boundary-en-dark.svg">
+  <img alt="Data boundary map: memory and evidence stay on your computer; the relay only ever handles ciphertext; model processing goes only to endpoints you configure." src="assets/boundary-en-light.svg" width="100%">
+</picture>
+
+<sub>Three zones, three different levels of trust.</sub>
+
+</div>
+
+<br>
+
+- **Memories, files and evidence** stay on your computer.
+- **Content for model processing** goes only to the endpoints you configure — or, when signed in to a friend. account, to the account's model service at friend.open-world.cn. Review the provider's privacy policy before enabling.
+- **Phone recordings** are encrypted with AES-256-GCM on the phone. The relay never receives the key and handles only ciphertext.
+- **The friend. website** cannot read your memory or your local access token.
+- **Installers and releases** contain no model weights, personal data, credentials, account authorizations or memories.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 08 · For developers: information-source API
 
 Register local information sources, such as smart-home hubs, and submit their events to the same processing queue through a local REST API at `http://127.0.0.1:8765`.
 
-| Step | Endpoint | Token |
-| --- | --- | --- |
-| Register a source | `POST /api/sources` | WebUI admin token |
-| Submit events | `POST /api/sources/{source_id}/events` | Source token |
+<div align="center">
 
-Rotation and revocation endpoints are also provided.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/sourceapi-en-dark.svg">
+  <img alt="Source API: register a source with the WebUI admin token, then submit events with a per-source write-only token." src="assets/sourceapi-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+<br>
 
 - Each source gets its own **write-only token**. It can submit events but cannot read memory or change settings.
 - Each event has a stable `event_id`, a timezone-aware `occurred_at`, faithful `text`, and optional JSON `attributes`.
 - Identical retries reuse the original job; conflicting event IDs are rejected.
 - The original JSON is kept as hash-verified evidence, and resulting memories remain reviewable candidates.
 
-> [!CAUTION]
-> Do not give the WebUI admin token to a connector, and do not expose the API to the public internet.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-caution-dark.svg">
+  <img alt="Caution" src="assets/badge-caution-light.svg" height="30">
+</picture>
+
+Do not give the WebUI admin token to a connector, and do not expose the API to the public internet.
+
+<details>
+<summary><img alt="" src="assets/marker-en.svg" height="15"> <b>Endpoints, for your client</b></summary>
+
+<br>
+
+```text
+POST /api/sources                        -> WebUI admin token
+POST /api/sources/{source_id}/events     -> per-source token
+```
+
+</details>
+
+<br>
 
 See the [source API contract and examples][source-api], including Windows PowerShell usage.
 
-## Updates
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 09 · Updates
 
 Version **0.1.8** combines Home, Records, language packages, registered connections and long-file processing. The interface uses one version number without an r suffix.
 
 Update from **Settings → Memory library → Software updates**. New versions are announced in the WebUI. **Update and restart** verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required, and existing connections and local data are kept. See the [update and recovery guide][updates].
 
-> [!NOTE]
-> The original v0.1.7 build has no updater; install 0.1.8 once manually. Back up your complete data directory before the first upgrade from 0.1.7. The internal build manifest retains `revision: 1` for compatibility. Previous releases remain available for recovery.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-note-dark.svg">
+  <img alt="Note" src="assets/badge-note-light.svg" height="30">
+</picture>
 
-## About this repository
+The original v0.1.7 build has no updater; install 0.1.8 once manually. Back up your complete data directory before the first upgrade from 0.1.7. The internal build manifest retains ``revision: 1`` for compatibility. Previous releases remain available for recovery.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-en-dark.svg">
+  <img alt="" src="assets/divider-en-light.svg" width="100%">
+</picture>
+
+</div>
+
+<br>
+
+## 10 · About this repository
 
 This is the public distribution repository for friend. Memory (the `openworld-memory` application). It contains documentation only. The complete application source code is not published here.
 
 [Release assets][releases] contain compiled executables, a small installer, checksums and bundled license notices. They do **not** contain the full source tree, development handoff documents or example datasets. Applicable license texts are included inside each native archive. Publishing these binaries does not make every component open source.
+
+<br>
+
+<div align="center">
+<sub><a href="#top">Back to top</a> &nbsp;·&nbsp; <a href="README-zh.md">简体中文</a> &nbsp;·&nbsp; <a href="https://friend.open-world.cn/app/">friend.open-world.cn</a></sub>
+</div>
+
+<br>
 
 [release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8
 [releases]: https://github.com/OpenWorld-Agent/friend./releases

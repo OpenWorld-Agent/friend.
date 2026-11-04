@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 596" width="1280" height="596" role="img" aria-label="Network diagram: one local MCP server exposes seven memory tools — three read, three write, one status (search, get, sources / add, update, delete / health).">
+<defs>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FF7A70" stop-opacity=".55"/>
+    <stop offset=".45" stop-color="#FF7A70" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#FF7A70" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset="1" stop-color="#FFFFFF"/>
+  </linearGradient>
+  <linearGradient id="cardAltGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F6F8FA"/>
+    <stop offset="1" stop-color="#F6F8FA"/>
+  </linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="rgba(31,35,40,.13)" flood-opacity="1"/>
+  </filter>
+  <filter id="softSm" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="rgba(31,35,40,.13)" flood-opacity=".8"/>
+  </filter></defs>
+<style>
+  .s{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI Variable Display', 'Segoe UI', 'Helvetica Neue', Arial, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif}
+  .m{font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', 'Microsoft YaHei', monospace}
+  .rise{opacity:0;animation:rise .9s cubic-bezier(.16,.84,.32,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+  @keyframes breathe{0%,100%{opacity:.45;transform:scale(.96)}50%{opacity:.9;transform:scale(1.05)}}
+  @keyframes breathe2{
+    0%{opacity:.05;transform:scale(.93);animation-timing-function:cubic-bezier(.66,0,.34,1)}
+    18%{opacity:.12;transform:scale(1.03);animation-timing-function:cubic-bezier(.37,0,.63,1)}
+    34%{opacity:.07;transform:scale(.99);animation-timing-function:cubic-bezier(.45,0,.55,1)}
+    57%{opacity:.15;transform:scale(1.085);animation-timing-function:cubic-bezier(.3,0,.7,1)}
+    72%{opacity:.088;transform:scale(1.008);animation-timing-function:cubic-bezier(.6,0,.4,1)}
+    88%{opacity:.126;transform:scale(1.052);animation-timing-function:cubic-bezier(.5,0,.5,1)}
+    100%{opacity:.05;transform:scale(.93)}
+  }
+  @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.5}}
+  .tw{animation:twinkle 9s ease-in-out infinite}
+  .snr{animation:snr 5.4s cubic-bezier(.16,.84,.32,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes snr{0%{transform:scale(.5);opacity:.55}65%{opacity:0}100%{transform:scale(1.6);opacity:0}}
+  .swp{animation-timing-function:cubic-bezier(.83,0,.17,1);animation-iteration-count:infinite;opacity:0}
+  .march{animation:march 1.65s linear infinite}
+  .dp{animation:dotpulse 2.6s ease-in-out infinite}
+  @keyframes dotpulse{0%,100%{opacity:.42}50%{opacity:1}}
+  @keyframes march{to{stroke-dashoffset:-24}}
+  .scan{animation:scan 4s cubic-bezier(.83,0,.17,1) infinite;opacity:0}
+  @keyframes scan{0%{transform:translateX(0);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateX(1140px);opacity:0}}
+  @media (prefers-reduced-motion: reduce){
+    .rise{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}
+    .tw{animation:none!important;opacity:.55!important}
+    .snr,.swp,.scan{animation:none!important;opacity:0!important}
+    .march{animation:none!important}
+    .dp{animation:none!important;opacity:1!important}
+  }</style>
+
+<rect width="1280" height="596" fill="#FFFFFF"/>
+<ellipse cx="640" cy="300" rx="434" ry="190" fill="none" stroke="#DDE3E9" stroke-width="1" stroke-dasharray="1 10" class="march" opacity=".85"/>
+<circle cx="48" cy="40" r="4" fill="#FF4B47" />
+  <text x="60" y="45" font-size="14" font-weight="500" fill="#59636E" class="m">read</text><circle cx="140" cy="40" r="4" fill="#B62E28" />
+  <text x="152" y="45" font-size="14" font-weight="500" fill="#59636E" class="m">write</text><circle cx="232" cy="40" r="4" fill="#F0736A" />
+  <text x="244" y="45" font-size="14" font-weight="500" fill="#59636E" class="m">status</text>
+<path id="tk0" d="M640,244 C664,207.62 664,173.38 640,137" fill="none" stroke="#FF4B47" stroke-width="1.8" opacity=".38" stroke-linecap="round"/><path id="tk1" d="M764,268.66 C819.47,279.39 866.15,267.59 909.86,231.79" fill="none" stroke="#FF4B47" stroke-width="1.8" opacity=".38" stroke-linecap="round"/><path id="tk2" d="M764,319.76 C820.68,353.09 877.59,362.16 941.83,348.09" fill="none" stroke="#B62E28" stroke-width="1.8" opacity=".38" stroke-linecap="round"/><path id="tk3" d="M686.56,356 C695.11,403.83 720.53,434.4 765.99,451.54" fill="none" stroke="#B62E28" stroke-width="1.8" opacity=".38" stroke-linecap="round"/><path id="tk4" d="M593.44,356 C547.98,373.14 522.56,403.71 514.01,451.54" fill="none" stroke="#B62E28" stroke-width="1.8" opacity=".38" stroke-linecap="round"/><path id="tk5" d="M516,319.76 C451.76,305.69 394.86,314.76 338.17,348.09" fill="none" stroke="#F0736A" stroke-width="1.8" opacity=".38" stroke-linecap="round"/><path id="tk6" d="M516,268.66 C472.29,232.86 425.62,221.06 370.14,231.79" fill="none" stroke="#FF4B47" stroke-width="1.8" opacity=".38" stroke-linecap="round"/>
+<g><g>
+  <animateMotion dur="1.15s" begin="0s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk0"/></animateMotion>
+  <circle r="9.360000000000001" fill="#FF4B47" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="0s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#FF4B47" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="0s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.15s" begin="-0.58s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk0"/></animateMotion>
+  <circle r="9.360000000000001" fill="#FF4B47" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="-0.58s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="-0.58s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#FF4B47" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="-0.58s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.15s" begin="-0.58s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.22s" begin="-0.37s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk1"/></animateMotion>
+  <circle r="9.360000000000001" fill="#FF4B47" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.37s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.37s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#FF4B47" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.37s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.37s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.22s" begin="-0.95s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk1"/></animateMotion>
+  <circle r="9.360000000000001" fill="#FF4B47" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.95s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.95s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#FF4B47" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.95s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.22s" begin="-0.95s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.29s" begin="-0.74s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk2"/></animateMotion>
+  <circle r="9.360000000000001" fill="#B62E28" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-0.74s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-0.74s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#B62E28" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-0.74s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-0.74s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.29s" begin="-1.32s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk2"/></animateMotion>
+  <circle r="9.360000000000001" fill="#B62E28" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-1.32s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-1.32s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#B62E28" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-1.32s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.29s" begin="-1.32s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.36s" begin="-1.11s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk3"/></animateMotion>
+  <circle r="9.360000000000001" fill="#B62E28" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.11s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#B62E28" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.11s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.36s" begin="-1.69s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk3"/></animateMotion>
+  <circle r="9.360000000000001" fill="#B62E28" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.69s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.69s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#B62E28" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.69s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.36s" begin="-1.69s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.43s" begin="-1.48s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk4"/></animateMotion>
+  <circle r="9.360000000000001" fill="#B62E28" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-1.48s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-1.48s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#B62E28" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-1.48s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-1.48s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.43s" begin="-2.06s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk4"/></animateMotion>
+  <circle r="9.360000000000001" fill="#B62E28" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-2.06s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-2.06s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#B62E28" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-2.06s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.43s" begin="-2.06s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.5s" begin="-1.85s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk5"/></animateMotion>
+  <circle r="9.360000000000001" fill="#F0736A" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-1.85s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-1.85s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#F0736A" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-1.85s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-1.85s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.5s" begin="-2.43s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk5"/></animateMotion>
+  <circle r="9.360000000000001" fill="#F0736A" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-2.43s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-2.43s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#F0736A" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-2.43s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.5s" begin="-2.43s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.56s" begin="-2.22s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk6"/></animateMotion>
+  <circle r="9.360000000000001" fill="#FF4B47" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.22s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.22s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#FF4B47" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.22s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.22s" repeatCount="indefinite"/></circle>
+</g><g>
+  <animateMotion dur="1.56s" begin="-2.8s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".42 0 .28 1"><mpath href="#tk6"/></animateMotion>
+  <circle r="9.360000000000001" fill="#FF4B47" opacity="0"><animate attributeName="r" values="3.74;9.360000000000001;9.360000000000001;3.74" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.16;.16;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.8s" repeatCount="indefinite"/></circle>
+  <circle r="3.6" fill="#FF4B47" opacity="0"><animate attributeName="r" values="1.26;3.6;3.6;1.26" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1" dur="1.56s" begin="-2.8s" repeatCount="indefinite"/></circle>
+</g></g>
+<g filter="url(#softSm)">
+  <rect x="532" y="81" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="552" cy="106" r="4" fill="#FF4B47" />
+  <text x="566" y="111" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_search</text>
+  <text x="566" y="131" font-size="14" font-weight="400" fill="#59636E" class="s">Search memories</text>
+</g><g filter="url(#softSm)">
+  <rect x="907.86" y="176" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="927.86" cy="201" r="4" fill="#FF4B47" />
+  <text x="941.86" y="206" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_get</text>
+  <text x="941.86" y="226" font-size="14" font-weight="400" fill="#59636E" class="s">Read a specific memory</text>
+</g><g filter="url(#softSm)">
+  <rect x="939.83" y="335.98" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="959.83" cy="360.98" r="4" fill="#B62E28" />
+  <text x="973.83" y="365.98" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_add</text>
+  <text x="973.83" y="385.98" font-size="14" font-weight="400" fill="#59636E" class="s">Report a new memory</text>
+</g><g filter="url(#softSm)">
+  <rect x="680.44" y="449.54" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="700.44" cy="474.54" r="4" fill="#B62E28" />
+  <text x="714.44" y="479.54" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_update</text>
+  <text x="714.44" y="499.54" font-size="14" font-weight="400" fill="#59636E" class="s">Revise an existing memory</text>
+</g><g filter="url(#softSm)">
+  <rect x="383.56" y="449.54" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="403.56" cy="474.54" r="4" fill="#B62E28" />
+  <text x="417.56" y="479.54" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_delete</text>
+  <text x="417.56" y="499.54" font-size="14" font-weight="400" fill="#59636E" class="s">Delete a memory</text>
+</g><g filter="url(#softSm)">
+  <rect x="124.17" y="335.98" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="144.17" cy="360.98" r="4" fill="#F0736A" />
+  <text x="158.17" y="365.98" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_health</text>
+  <text x="158.17" y="385.98" font-size="14" font-weight="400" fill="#59636E" class="s">Check service status</text>
+</g><g filter="url(#softSm)">
+  <rect x="156.14" y="176" width="216" height="58" rx="16" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+  <circle cx="176.14" cy="201" r="4" fill="#FF4B47" />
+  <text x="190.14" y="206" font-size="16" font-weight="600" fill="#0D1117" class="m">memory_sources</text>
+  <text x="190.14" y="226" font-size="14" font-weight="400" fill="#59636E" class="s">List memory sources</text>
+</g>
+<g filter="url(#soft)">
+  <rect x="516" y="244" width="248" height="112" rx="24" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+</g>
+<g transform="translate(550 270)"><g transform="scale(0.18)">
+  <path fill="#FF4B47" d="M10,-99.499A100 100 0 0 1 99.499,-10L58.146,-10A59 59 0 0 0 10,-58.146Z"/>
+  <path fill="#0D1117" d="M99.499,10A100 100 0 0 1 10,99.499L10,58.146A59 59 0 0 0 58.146,10Z"/>
+  <path fill="#0D1117" d="M-10,99.499A100 100 0 0 1 -99.499,10L-58.146,10A59 59 0 0 0 -10,58.146Z"/>
+  <path fill="#0D1117" d="M-99.499,-10A100 100 0 0 1 -10,-99.499L-10,-58.146A59 59 0 0 0 -58.146,-10Z"/></g></g>
+<text x="578" y="286" font-size="22" font-weight="650" fill="#0D1117" class="s">friend. Memory</text>
+<text x="550" y="326" font-size="15" font-weight="400" fill="#59636E" class="s">seven tools · stdio MCP</text>
+<text x="640" y="578" font-size="18" font-weight="400" fill="#8B949E" text-anchor="middle" class="s">One local server. Seven tools. Plus an authenticated HTTP endpoint in the WebUI.</text>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 562" width="1280" height="562" role="img" aria-label="Six capabilities: local memory, files with evidence, MCP for Codex and Claude, phone recordings, Notion sync, and configurable models.">
+<defs>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FF7A70" stop-opacity=".55"/>
+    <stop offset=".45" stop-color="#FF7A70" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#FF7A70" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2B323C"/>
+    <stop offset="1" stop-color="#1B2129"/>
+  </linearGradient>
+  <linearGradient id="cardAltGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#39424F"/>
+    <stop offset="1" stop-color="#262E38"/>
+  </linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="rgba(1,4,9,.62)" flood-opacity="1"/>
+  </filter>
+  <filter id="softSm" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="rgba(1,4,9,.62)" flood-opacity=".8"/>
+  </filter></defs>
+<style>
+  .s{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI Variable Display', 'Segoe UI', 'Helvetica Neue', Arial, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif}
+  .m{font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', 'Microsoft YaHei', monospace}
+  .rise{opacity:0;animation:rise .9s cubic-bezier(.16,.84,.32,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+  @keyframes breathe{0%,100%{opacity:.45;transform:scale(.96)}50%{opacity:.9;transform:scale(1.05)}}
+  @keyframes breathe2{
+    0%{opacity:.05;transform:scale(.93);animation-timing-function:cubic-bezier(.66,0,.34,1)}
+    18%{opacity:.12;transform:scale(1.03);animation-timing-function:cubic-bezier(.37,0,.63,1)}
+    34%{opacity:.07;transform:scale(.99);animation-timing-function:cubic-bezier(.45,0,.55,1)}
+    57%{opacity:.15;transform:scale(1.085);animation-timing-function:cubic-bezier(.3,0,.7,1)}
+    72%{opacity:.088;transform:scale(1.008);animation-timing-function:cubic-bezier(.6,0,.4,1)}
+    88%{opacity:.126;transform:scale(1.052);animation-timing-function:cubic-bezier(.5,0,.5,1)}
+    100%{opacity:.05;transform:scale(.93)}
+  }
+  @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.5}}
+  .tw{animation:twinkle 9s ease-in-out infinite}
+  .snr{animation:snr 5.4s cubic-bezier(.16,.84,.32,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes snr{0%{transform:scale(.5);opacity:.55}65%{opacity:0}100%{transform:scale(1.6);opacity:0}}
+  .swp{animation-timing-function:cubic-bezier(.83,0,.17,1);animation-iteration-count:infinite;opacity:0}
+  .march{animation:march 1.65s linear infinite}
+  .dp{animation:dotpulse 2.6s ease-in-out infinite}
+  @keyframes dotpulse{0%,100%{opacity:.42}50%{opacity:1}}
+  @keyframes march{to{stroke-dashoffset:-24}}
+  .scan{animation:scan 4s cubic-bezier(.83,0,.17,1) infinite;opacity:0}
+  @keyframes scan{0%{transform:translateX(0);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateX(1140px);opacity:0}}
+  @media (prefers-reduced-motion: reduce){
+    .rise{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}
+    .tw{animation:none!important;opacity:.55!important}
+    .snr,.swp,.scan{animation:none!important;opacity:0!important}
+    .march{animation:none!important}
+    .dp{animation:none!important;opacity:1!important}
+  }@keyframes swp{0%{transform:translateX(0);opacity:0}18%{opacity:1}82%{opacity:1}100%{transform:translateX(285.33px);opacity:0}}</style>
+
+<rect width="1280" height="562" fill="#0D1117"/>
+<g filter="url(#softSm)"><rect x="40" y="44" width="385.33" height="209" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<g transform="translate(76 77)" opacity=".92"><g fill="none" stroke="#B49BE0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-9.66" y="-6.44" width="19.32" height="12.88" rx="2.76"/>
+    <path d="M-9.66 -6.44 l11.5 -3.4499999999999997 h7.82 v3.4499999999999997"/>
+    <circle cx="5.52" cy="0" r="1.265" fill="#B49BE0" stroke="none"/></g></g>
+<text x="96" y="84" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Local memory</text>
+<text x="64" y="126" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Memories and evidence are stored on</text><text x="64" y="151" font-size="17" font-weight="400" fill="#9DA9B7" class="s">your computer. Text can be saved and</text><text x="64" y="176" font-size="17" font-weight="400" fill="#9DA9B7" class="s">searched without a model or GPU.</text><g filter="url(#softSm)"><rect x="447.33" y="44" width="385.33" height="209" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<g transform="translate(483.3333333333333 77)" opacity=".92"><g fill="none" stroke="#88B4E0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-8.28 -11.04 h11.04 l5.98 5.98 v16.099999999999998 h-17.02 z"/>
+    <path d="M-2.99 -2.76 h6.8999999999999995 M-2.99 1.84 h6.8999999999999995"/></g></g>
+<text x="503.33" y="84" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Files with evidence</text>
+<text x="471.33" y="126" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Upload files in the WebUI, track</text><text x="471.33" y="151" font-size="17" font-weight="400" fill="#9DA9B7" class="s">processing, and keep the originals and</text><text x="471.33" y="176" font-size="17" font-weight="400" fill="#9DA9B7" class="s">evidence links for review.</text><g filter="url(#softSm)"><rect x="854.67" y="44" width="385.33" height="209" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<g transform="translate(890.6666666666666 77)" opacity=".92"><g fill="none" stroke="#FF6B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-4.14 -6.44 l-5.75 6.44 l5.75 6.44"/>
+    <path d="M4.14 -6.44 l5.75 6.44 l-5.75 6.44"/></g></g>
+<text x="910.67" y="84" font-size="20" font-weight="600" fill="#F5F8FB" class="s">MCP for any agent</text>
+<text x="878.67" y="126" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Seven memory tools over stdio MCP,</text><text x="878.67" y="151" font-size="17" font-weight="400" fill="#9DA9B7" class="s">plus an authenticated local HTTP MCP</text><text x="878.67" y="176" font-size="17" font-weight="400" fill="#9DA9B7" class="s">endpoint. Codex and Claude are</text><text x="878.67" y="201" font-size="17" font-weight="400" fill="#9DA9B7" class="s">configured for you; any other MCP</text><text x="878.67" y="226" font-size="17" font-weight="400" fill="#9DA9B7" class="s">client can join.</text><g filter="url(#softSm)"><rect x="40" y="275" width="385.33" height="209" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<g transform="translate(76 308)" opacity=".92"><g fill="none" stroke="#8FBE9E" stroke-width="1.7" stroke-linecap="round">
+    <rect x="-6.210000000000001" y="-11.04" width="12.420000000000002" height="22.08" rx="2.76"/>
+    <path d="M-2.07 7.36 h4.14"/></g></g>
+<text x="96" y="315" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Phone recordings</text>
+<text x="64" y="357" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Record with the phone's normal</text><text x="64" y="382" font-size="17" font-weight="400" fill="#9DA9B7" class="s">recorder. Each recording is encrypted</text><text x="64" y="407" font-size="17" font-weight="400" fill="#9DA9B7" class="s">on the phone and becomes a transcribed</text><text x="64" y="432" font-size="17" font-weight="400" fill="#9DA9B7" class="s">memory in about 8 seconds.</text><g filter="url(#softSm)"><rect x="447.33" y="275" width="385.33" height="209" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<g transform="translate(483.3333333333333 308)" opacity=".92"><g><rect x="-10.35" y="-10.35" width="20.7" height="20.7" rx="4.14" fill="none" stroke="#B49BE0" stroke-width="1.6"/>
+    <path d="M-3.4499999999999997 5.29 v-10.58 l6.8999999999999995 10.58 v-10.58" fill="none" stroke="#B49BE0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<text x="503.33" y="315" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Notion sync</text>
+<text x="471.33" y="357" font-size="17" font-weight="400" fill="#9DA9B7" class="s">A built-in account connector.</text><text x="471.33" y="382" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Authorize your pages once and friend.</text><text x="471.33" y="407" font-size="17" font-weight="400" fill="#9DA9B7" class="s">syncs them every 15 minutes.</text><g filter="url(#softSm)"><rect x="854.67" y="275" width="385.33" height="209" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<g transform="translate(890.6666666666666 308)" opacity=".92"><g><line x1="0" y1="0" x2="0" y2="-9.66" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="2.44" y2="-2.44" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="9.66" y2="0" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="2.44" y2="2.44" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="9.66" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="-2.44" y2="2.44" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="-9.66" y2="0" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/><line x1="0" y1="0" x2="-2.44" y2="-2.44" stroke="#D9B36B" stroke-width="2.53" stroke-linecap="round"/></g></g>
+<text x="910.67" y="315" font-size="20" font-weight="600" fill="#F5F8FB" class="s">Models, your way</text>
+<text x="878.67" y="357" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Sign in with a friend. account to use</text><text x="878.67" y="382" font-size="17" font-weight="400" fill="#9DA9B7" class="s">text, image, embedding and speech</text><text x="878.67" y="407" font-size="17" font-weight="400" fill="#9DA9B7" class="s">models billed to its balance, with no</text><text x="878.67" y="432" font-size="17" font-weight="400" fill="#9DA9B7" class="s">keys to enter. Or configure your own</text><text x="878.67" y="457" font-size="17" font-weight="400" fill="#9DA9B7" class="s">compatible endpoints in the WebUI.</text>
+<text x="640" y="546" font-size="18" font-weight="400" fill="#6F7B89" text-anchor="middle" class="s">Six properties of the same idea: your context, kept by you, lent to your agents.</text>
+</svg>
