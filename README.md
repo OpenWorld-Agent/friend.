@@ -25,10 +25,11 @@ Keep your conversations, meeting notes and everyday records in one place, decide
 Paste this prompt into **Codex** on the computer that will hold your memory database:
 
 ```text
-Install friend. Memory v0.1.7 from the public release at https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.7.
+Install friend. Memory v0.1.8 from the public release at https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8.
 Download the `install.py` and `SHA256SUMS` release assets, verify the installer's SHA-256,
-then run `python3 install.py --version v0.1.7 --clients codex,claude --start --autostart`
+then run `python3 install.py --version v0.1.8 --clients codex,claude --start --autostart`
 (on Windows, `py -3 install.py` also works).
+Back up the complete existing data directory before upgrading from 0.1.7.
 If an older WebUI is running, stop it before replacing the executable;
 preserve my existing memory data and Codex/Claude MCP configurations.
 Verify that the MCP server starts and open the local WebUI.
@@ -40,9 +41,9 @@ Then **restart Codex and Claude** so they load the new MCP configuration.
 
 | Platform | Native package | Requirements |
 | --- | --- | --- |
-| macOS, Apple Silicon | `openworld-memory-v0.1.7-macos-arm64.tar.gz` | macOS 14 or later |
-| Linux, x86_64 | `openworld-memory-v0.1.7-linux-x86_64.tar.gz` | glibc 2.35 or later (for example, Ubuntu 22.04+) |
-| Windows, x64 | `openworld-memory-v0.1.7-windows-x86_64.zip` | Windows 10/11 |
+| macOS, Apple Silicon | `openworld-memory-v0.1.8-macos-arm64.tar.gz` | macOS 14 or later |
+| Linux, x86_64 | `openworld-memory-v0.1.8-linux-x86_64.tar.gz` | glibc 2.35 or later (for example, Ubuntu 22.04+) |
+| Windows, x64 | `openworld-memory-v0.1.8-windows-x86_64.zip` | Windows 10/11 |
 
 There is no native Intel Mac package in this release. The installer needs Python 3.9+; the native executable includes its own runtime.
 
@@ -51,7 +52,7 @@ There is no native Intel Mac package in this release. The installer needs Python
 
 <br>
 
-1. Download `install.py` and `SHA256SUMS` from the [v0.1.7 release][release].
+1. Download `install.py` and `SHA256SUMS` from the [v0.1.8 release][release].
 2. Hash the installer and compare it with its line in `SHA256SUMS`:
 
    | System | Command |
@@ -63,7 +64,7 @@ There is no native Intel Mac package in this release. The installer needs Python
 3. Run the installer:
 
    ```bash
-   python3 install.py --version v0.1.7 --clients codex,claude --start --autostart
+   python3 install.py --version v0.1.8 --clients codex,claude --start --autostart
    ```
 
 The installer then:
@@ -85,7 +86,13 @@ You can also extract a native archive yourself and run `./openworld-memory setup
 - On first login, a four-step guide covers MCP, optional model endpoints and your first upload. You can skip it and reopen it later in settings.
 - The **Chat** tab at [friend.open-world.cn/app](https://friend.open-world.cn/app/) checks for the local app and opens its WebUI. If the app is unavailable, Chat shows the installation prompt and an **Open local WebUI** button.
 - Audio and video processing requires system FFmpeg/ffprobe.
-- Switch the interface between English and Simplified Chinese in **Settings → Appearance → Language**. Memories, page text, names, files and drafts stay in their original language.
+- Switch the interface between English and Simplified Chinese in **Settings → Appearance → Language**. Enable content languages for generated Records summaries; saved translations are reused when switching languages. Originals, names, files and drafts keep their original language.
+
+## New in 0.1.8
+
+Home and Records replace the old raw-memory page. Records shows received and provided data, cached Chinese/English summaries and links between incoming sources and later uses. Details open in floating cards. Connected applications and devices appear under their own connections; Mac Codex and Claude Code chat reception can be enabled there explicitly. Existing memories and settings are retained. Old memories without handoff evidence are not invented into historical transactions.
+
+Model-generated summaries need a reachable configured model service. The release acceptance could not complete a new live account-model loop because the account endpoint was unreachable from the test Mac; see the release notes for the latest status. The separate Linux Mem0 chat pilot requires its explicit source installation and extra dependencies; it is not enabled in these standard native packages.
 
 ## What it does
 
@@ -163,9 +170,9 @@ friend. Memory preserves and validates canonical raw payloads across backends, i
 
 ## Phone recordings
 
-friend. Memory v0.1.7 receives phone recordings itself; no separate receiver program is needed.
+friend. Memory v0.1.8 receives phone recordings itself; no separate receiver program is needed.
 
-1. **Install the app.** Install the friend. Android app (`friend-v1.0.1-debug.apk` in this release; Android 10 or later).
+1. **Install the app.** Install the friend. Android app ([Android demo APK](https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/friend-v1.0.1-debug.apk); Android 10 or later).
 2. **Pair.** In the local WebUI, open **Settings → Phone recordings** and click **One-click pairing**. Nothing needs to be configured: friend. Memory has a built-in default relay and its certificate, opens a channel and shows a QR code. From a terminal, run `openworld-memory mobile pair`.
 3. **Scan.** Tap **Scan to pair** in the app and scan the QR code.
 4. **Record.** Use the phone's normal recorder. New recordings are transcribed and saved as reviewable memories.
@@ -196,7 +203,7 @@ See the [phone recording guide][mobile] for the protocol and security boundaries
 
 ## Connections and Notion
 
-The **Connections** page manages custom sources and platform connections, with the six quick actions below them.
+**Home** manages your connected devices, applications and platforms, and provides file upload. **Records** shows information handoffs.
 
 **Connect Notion.** Choose **Notion → Connect**, authorize your pages, select all authorized content or individual pages, and start syncing. You do not need to create a developer app or enter an OAuth secret.
 
@@ -230,23 +237,23 @@ See the [source API contract and examples][source-api], including Windows PowerS
 
 ## Updates
 
-The current v0.1.7 release is **revision 14**. It adds friend. account sign-in (**Settings → Model endpoints → Sign in**: confirm a code in your browser; models are then provided by the account and charged to its balance, and your manual configuration returns when you sign out), embedding models through the default relay, hosted platform connections, transcription of original audio on the configured server, and memory card previews.
+Version **0.1.8** combines Home, Records, language packages, registered connections and long-file processing. The interface uses one version number without an r suffix.
 
 Update from **Settings → Memory library → Software updates**. New versions are announced in the WebUI. **Update and restart** verifies the package, backs up local memories and configuration, and checks the restarted app. No cloud account is required, and existing connections and local data are kept. See the [update and recovery guide][updates].
 
 > [!NOTE]
-> The original v0.1.7 build has no updater. Install the current package once to get it. `--build-info` reports revision 14. Standard asset names are the current packages; `r1-*` to `r4-*` assets preserve previous builds for recovery.
+> The original v0.1.7 build has no updater; install 0.1.8 once manually. Back up your complete data directory before the first upgrade from 0.1.7. The internal build manifest retains `revision: 1` for compatibility. Previous releases remain available for recovery.
 
 ## About this repository
 
 This is the public distribution repository for friend. Memory (the `openworld-memory` application). It contains documentation only. The complete application source code is not published here.
 
-[Release assets][releases] contain compiled executables, a small installer, the friend. Android app (a debug-signed demo build), checksums and bundled license notices. They do **not** contain the full source tree, development handoff documents or example datasets. Applicable license texts are included inside each native archive. Publishing these binaries does not make every component open source.
+[Release assets][releases] contain compiled executables, a small installer, checksums and bundled license notices. They do **not** contain the full source tree, development handoff documents or example datasets. Applicable license texts are included inside each native archive. Publishing these binaries does not make every component open source.
 
-[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.7
+[release]: https://github.com/OpenWorld-Agent/friend./releases/tag/v0.1.8
 [releases]: https://github.com/OpenWorld-Agent/friend./releases
-[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/MCP-POLICY.md
-[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/MOBILE-VOICE.md
-[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/CONNECTORS.md
-[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/SOURCE-API.md
-[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.7/UPDATES.md
+[mcp-policy]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MCP-POLICY.md
+[mobile]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/MOBILE-VOICE.md
+[connectors]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/CONNECTORS.md
+[source-api]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/SOURCE-API.md
+[updates]: https://github.com/OpenWorld-Agent/friend./releases/download/v0.1.8/UPDATES.md
