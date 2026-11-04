@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 460" width="1280" height="460" role="img" aria-label="Data boundary map: memory and evidence stay on your computer; the relay only ever handles ciphertext; model processing goes only to endpoints you configure.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" width="1280" height="480" role="img" aria-label="Data boundary map: memory and evidence stay on your computer; the relay only ever handles ciphertext; model processing goes only to endpoints you configure.">
 <defs>
   <radialGradient id="halo" cx="50%" cy="50%" r="50%">
     <stop offset="0" stop-color="#FF7A70" stop-opacity=".55"/>
@@ -53,9 +53,9 @@
     .dp{animation:none!important;opacity:1!important}
   }</style>
 
-<rect width="1280" height="460" fill="#FFFFFF"/>
+<rect width="1280" height="480" fill="#FFFFFF"/>
 
-<rect x="48" y="76" width="464" height="292" rx="24" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+<rect x="48" y="76" width="464" height="312" rx="24" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
 <rect x="78" y="102" width="36" height="3.5" rx="1.8" fill="#B62E28" />
 <text x="78" y="134" font-size="13" font-weight="700" fill="#8B949E" letter-spacing="1.5" class="s">ZONE 01</text>
 <text x="78" y="166" font-size="23" font-weight="650" fill="#0D1117" class="s">On your computer</text>
@@ -65,9 +65,9 @@
   <text x="100" y="254" font-size="18" font-weight="400" fill="#3D444D" class="s">Original uploads, kept as-is</text><circle cx="85" cy="282" r="3.4" fill="#B62E28" />
   <text x="100" y="288" font-size="18" font-weight="400" fill="#3D444D" class="s">Local WebUI · 127.0.0.1:8765</text><circle cx="85" cy="316" r="3.4" fill="#B62E28" />
   <text x="100" y="322" font-size="18" font-weight="400" fill="#3D444D" class="s">Access token and pairing secrets</text>
-<text x="78" y="352" font-size="16" font-weight="500" fill="#8B949E" class="s">Only you can read this.</text>
+<text x="78" y="368" font-size="16" font-weight="500" fill="#8B949E" class="s">Only you can read this.</text>
 
-<rect x="578" y="76" width="228" height="292" rx="24" fill="#F6F8FA" stroke="#DDE3E9" stroke-width="1"/>
+<rect x="578" y="76" width="228" height="312" rx="24" fill="#F6F8FA" stroke="#DDE3E9" stroke-width="1"/>
 <rect x="606" y="102" width="36" height="3.5" rx="1.8" fill="#F0736A" />
 <text x="606" y="134" font-size="13" font-weight="700" fill="#8B949E" letter-spacing="1.5" class="s">ZONE 02</text>
 <text x="606" y="166" font-size="23" font-weight="650" fill="#0D1117" class="s">Relay</text>
@@ -78,7 +78,7 @@
 <text x="606" y="310" font-size="16" font-weight="400" fill="#59636E" class="s">deleted after 7 days.</text>
 
 
-<rect x="872" y="76" width="356" height="292" rx="24" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
+<rect x="872" y="76" width="356" height="312" rx="24" fill="#FFFFFF" stroke="#DDE3E9" stroke-width="1"/>
 <rect x="902" y="102" width="36" height="3.5" rx="1.8" fill="#FF4B47" />
 <text x="902" y="134" font-size="13" font-weight="700" fill="#8B949E" letter-spacing="1.5" class="s">ZONE 03</text>
 <text x="902" y="166" font-size="23" font-weight="650" fill="#0D1117" class="s">Endpoints you configure</text>
@@ -87,10 +87,10 @@
   <text x="924" y="220" font-size="17" font-weight="400" fill="#3D444D" class="s">Your own model endpoints</text><circle cx="909" cy="248" r="3.4" fill="#FF4B47" />
   <text x="924" y="254" font-size="17" font-weight="400" fill="#3D444D" class="s">A friend. account, if signed in</text><circle cx="909" cy="282" r="3.4" fill="#FF4B47" />
   <text x="924" y="288" font-size="17" font-weight="400" fill="#3D444D" class="s">Speech: FireRed via the relay</text>
-<text x="902" y="352" font-size="16" font-weight="500" fill="#8B949E" class="s">Only what you choose to send.</text>
+<text x="902" y="368" font-size="16" font-weight="500" fill="#8B949E" class="s">Only what you choose to send.</text>
 
 <line x1="512" y1="214" x2="578" y2="214" stroke="#8B949E" stroke-width="1.6" stroke-dasharray="5 6" class="march"/>
 <line x1="806" y1="214" x2="872" y2="214" stroke="#8B949E" stroke-width="1.6" stroke-dasharray="5 6" class="march"/>
 
-<text x="640" y="406" font-size="19" font-weight="400" fill="#59636E" text-anchor="middle" class="s">friend.open-world.cn cannot read your memory or your local access token.</text>
+<text x="640" y="426" font-size="19" font-weight="400" fill="#59636E" text-anchor="middle" class="s">friend.open-world.cn cannot read your memory or your local access token.</text>
 </svg>

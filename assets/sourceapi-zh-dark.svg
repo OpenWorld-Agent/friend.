@@ -58,14 +58,14 @@
 <text x="66" y="84" font-size="21" font-weight="600" fill="#F5F8FB" class="s">注册来源</text>
 <rect x="66" y="100" width="62" height="26" rx="7" fill="#FF6B63" />
 <text x="97" y="118" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" class="m">POST</text>
-<rect x="138" y="100" width="464" height="26" rx="7" fill="#141A21" />
+<rect x="138" y="100" width="126.8" height="26" rx="7" fill="#141A21" />
 <text x="150" y="118" font-size="14" font-weight="400" fill="#D2DBE5" class="m">/api/sources</text>
 <text x="66" y="164" font-size="13" font-weight="700" fill="#6F7B89" letter-spacing="1.4" class="s">令牌</text>
 <text x="66" y="192" font-size="17" font-weight="500" fill="#9DA9B7" class="s">WebUI 管理令牌</text><g filter="url(#softSm)"><rect x="652" y="40" width="588" height="182" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
 <text x="678" y="84" font-size="21" font-weight="600" fill="#F5F8FB" class="s">提交事件</text>
 <rect x="678" y="100" width="62" height="26" rx="7" fill="#FF6B63" />
 <text x="709" y="118" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" class="m">POST</text>
-<rect x="750" y="100" width="464" height="26" rx="7" fill="#141A21" />
+<rect x="750" y="100" width="286.4" height="26" rx="7" fill="#141A21" />
 <text x="762" y="118" font-size="14" font-weight="400" fill="#D2DBE5" class="m">/api/sources/{source_id}/events</text>
 <text x="678" y="164" font-size="13" font-weight="700" fill="#6F7B89" letter-spacing="1.4" class="s">令牌</text>
 <text x="678" y="192" font-size="17" font-weight="500" fill="#9DA9B7" class="s">来源令牌</text>
