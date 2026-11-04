@@ -133,6 +133,10 @@ Then **restart that agent** so it loads the new MCP configuration.
 
 <br>
 
+- **macOS (Apple Silicon):** macOS 14 or later.
+- **Linux (x86_64):** glibc 2.35 or later (for example, Ubuntu 22.04+).
+- **Windows (x64):** Windows 10/11.
+
 There is no native Intel Mac package in this release. The installer needs Python 3.9+; the native executable includes its own runtime.
 
 <details>

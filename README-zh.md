@@ -121,6 +121,10 @@ friend. Memory 不绑定任何单一 Agent。它通过 **stdio MCP** 提供七�
 
 <br>
 
+- **macOS（Apple Silicon）：** macOS 14 或更高版本。
+- **Linux（x86_64）：** glibc 2.35 或更高版本（如 Ubuntu 22.04+）。
+- **Windows（x64）：** Windows 10/11。
+
 本版没有 Intel Mac 独立包。运行安装器需要 Python 3.9+；独立可执行文件自带运行环境。
 
 <details>
