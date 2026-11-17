@@ -70,7 +70,7 @@
     <path d="M-4.14 -6.44 l-5.75 6.44 l5.75 6.44"/>
     <path d="M4.14 -6.44 l5.75 6.44 l-5.75 6.44"/></g></g>
 <text x="910.67" y="84" font-size="20" font-weight="600" fill="#F5F8FB" class="s">为任意 Agent 提供 MCP</text>
-<text x="878.67" y="126" font-size="17" font-weight="400" fill="#9DA9B7" class="s">通过 stdio MCP 提供 7 个记忆工具，WebUI</text><text x="878.67" y="151" font-size="17" font-weight="400" fill="#9DA9B7" class="s">另需认证的本机 HTTP 端点。Codex 与</text><text x="878.67" y="176" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Claude 已自动配置，其他 MCP 客户端也能接</text><text x="878.67" y="201" font-size="17" font-weight="400" fill="#9DA9B7" class="s">入。</text><g filter="url(#softSm)"><rect x="40" y="250" width="385.33" height="184" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
+<text x="878.67" y="126" font-size="17" font-weight="400" fill="#9DA9B7" class="s">通过 stdio MCP 提供 13 个工具，WebUI</text><text x="878.67" y="151" font-size="17" font-weight="400" fill="#9DA9B7" class="s">另需认证的本机 HTTP 端点。Codex 与</text><text x="878.67" y="176" font-size="17" font-weight="400" fill="#9DA9B7" class="s">Claude 已自动配置，其他 MCP 客户端也能接</text><text x="878.67" y="201" font-size="17" font-weight="400" fill="#9DA9B7" class="s">入。</text><g filter="url(#softSm)"><rect x="40" y="250" width="385.33" height="184" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
 <g transform="translate(76 283)" opacity=".92"><g fill="none" stroke="#8FBE9E" stroke-width="1.7" stroke-linecap="round">
     <rect x="-6.210000000000001" y="-11.04" width="12.420000000000002" height="22.08" rx="2.76"/>
     <path d="M-2.07 7.36 h4.14"/></g></g>

@@ -61,7 +61,7 @@
 <text x="92" y="94" font-size="21" font-weight="600" fill="#F5F8FB" class="s">macOS</text>
 <text x="92" y="120" font-size="16" font-weight="400" fill="#6F7B89" class="s">Apple Silicon</text>
 <rect x="64" y="138" width="337.33" height="46" rx="10" fill="#141A21" />
-<text x="78" y="158" font-size="14" font-weight="400" fill="#D2DBE5" class="m">openworld-memory-v0.1.8-</text><text x="78" y="176" font-size="14" font-weight="400" fill="#D2DBE5" class="m">macos-arm64.tar.gz</text>
+<text x="78" y="158" font-size="14" font-weight="400" fill="#D2DBE5" class="m">openworld-memory-v0.1.13-</text><text x="78" y="176" font-size="14" font-weight="400" fill="#D2DBE5" class="m">macos-arm64.tar.gz</text>
 <text x="64" y="208" font-size="16" font-weight="400" fill="#9DA9B7" class="s">系统要求</text>
 <text x="64" y="230" font-size="16" font-weight="400" fill="#9DA9B7" class="s">macOS 14 或更高版本</text><g filter="url(#softSm)"><rect x="447.33" y="44" width="385.33" height="212" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
 <g transform="translate(482.3333333333333 84)" opacity=".9"><g fill="none" stroke="#8FBE9E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
@@ -70,7 +70,7 @@
 <text x="499.33" y="94" font-size="21" font-weight="600" fill="#F5F8FB" class="s">Linux</text>
 <text x="499.33" y="120" font-size="16" font-weight="400" fill="#6F7B89" class="s">x86_64</text>
 <rect x="471.33" y="138" width="337.33" height="46" rx="10" fill="#141A21" />
-<text x="485.33" y="158" font-size="14" font-weight="400" fill="#D2DBE5" class="m">openworld-memory-v0.1.8-</text><text x="485.33" y="176" font-size="14" font-weight="400" fill="#D2DBE5" class="m">linux-x86_64.tar.gz</text>
+<text x="485.33" y="158" font-size="14" font-weight="400" fill="#D2DBE5" class="m">openworld-memory-v0.1.9-</text><text x="485.33" y="176" font-size="14" font-weight="400" fill="#D2DBE5" class="m">linux-x86_64.tar.gz</text>
 <text x="471.33" y="208" font-size="16" font-weight="400" fill="#9DA9B7" class="s">系统要求</text>
 <text x="471.33" y="230" font-size="16" font-weight="400" fill="#9DA9B7" class="s">glibc 2.35 或更高（如 Ubuntu 22.04+）</text><g filter="url(#softSm)"><rect x="854.67" y="44" width="385.33" height="212" rx="20" fill="url(#cardGrad)" stroke="#3E4855" stroke-width="1"/></g>
 <g transform="translate(889.6666666666666 84)" opacity=".9"><g fill="none" stroke="#B49BE0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -79,7 +79,7 @@
 <text x="906.67" y="94" font-size="21" font-weight="600" fill="#F5F8FB" class="s">Windows</text>
 <text x="906.67" y="120" font-size="16" font-weight="400" fill="#6F7B89" class="s">x64</text>
 <rect x="878.67" y="138" width="337.33" height="46" rx="10" fill="#141A21" />
-<text x="892.67" y="158" font-size="14" font-weight="400" fill="#D2DBE5" class="m">openworld-memory-v0.1.8-</text><text x="892.67" y="176" font-size="14" font-weight="400" fill="#D2DBE5" class="m">windows-x86_64.zip</text>
+<text x="892.67" y="158" font-size="14" font-weight="400" fill="#D2DBE5" class="m">openworld-memory-v0.1.9-</text><text x="892.67" y="176" font-size="14" font-weight="400" fill="#D2DBE5" class="m">windows-x86_64.zip</text>
 <text x="878.67" y="208" font-size="16" font-weight="400" fill="#9DA9B7" class="s">系统要求</text>
 <text x="878.67" y="230" font-size="16" font-weight="400" fill="#9DA9B7" class="s">Windows 10/11</text>
 <text x="640" y="296" font-size="17" font-weight="400" fill="#6F7B89" text-anchor="middle" class="s">安装器需要 Python 3.9+；独立可执行文件自带运行环境。</text>
