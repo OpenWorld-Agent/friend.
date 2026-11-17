@@ -24,13 +24,6 @@
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-warning-zh-dark.svg">
-  <img alt="服务状态" src="assets/badge-warning-zh-light.svg" height="30">
-</picture>
-
-**服务状态。** 账号登录、余额和账号模型依赖 friend. 的线上账号服务，团队完成后端交接期间可能不可用。下载、本机安装和你自己配置的模型端点不受影响。
-
 <div align="center">
 
 <picture>

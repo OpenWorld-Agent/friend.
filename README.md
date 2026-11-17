@@ -26,13 +26,6 @@ Keep your conversations, meeting notes and everyday records in one place, decide
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-warning-dark.svg">
-  <img alt="Service status" src="assets/badge-warning-light.svg" height="30">
-</picture>
-
-**Service status.** Account sign-in, balance and account models depend on friend.'s hosted account service, which may be unavailable while the team finishes its backend handoff. Downloads, local installation and your own model endpoints work independently of it.
-
 <div align="center">
 
 <picture>
